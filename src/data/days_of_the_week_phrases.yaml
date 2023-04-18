@@ -1,0 +1,21 @@
+id: 87f0d6f0-cd8b-4467-83cf-ab3dzzzdb3fb2
+name: Phrases with days of the week
+type: flashcard
+spec: 
+  data:
+  - english: on monday, i'm going to meet my friend
+    spanish: el lunes, voy a quedar mi amigo
+  - english: on tuesday, I go to the bank
+    spanish: el martes, voy al banco
+  - english: on wedenesday, i want to go for a walk in the forest
+    spanish: el miércoles, quiero ir a caminar en el bosque
+  - english: on thursday, I would like to go for a run
+    spanish: el jueves, me gustaría ir a correr
+  - english: on friday, my brother is coming from vancouver
+    spanish: el viernes, mi hermano está veniendo aqui de Vancouver
+  - english: on Saturday, in the morning im going to Shawnigan lake to hunt bird with shelly and marco
+    spanish: el sábado,  en la mañana voy a Shawnigan lake para hacer hunt pajeros con Shelly y Marco
+  - english: On Sunday, i'm not doing anything
+    spanish: el domingo, no hago nada :)
+  - english: on mondays, Matthys (Karlien's brother) will be coming to my house to study airfact class with me
+    spanish: Los lunes, Matyhs (el hermano de Karlien) estará veniendo a mi casa para estudiar la classe de avíon conmigo

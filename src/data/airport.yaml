@@ -1,0 +1,55 @@
+id: 3251f798-338b-4987-ab7d-7c85afa785eb
+name: El Aeropuerto
+type: vocabulary
+spec: 
+  data:
+  - english: the plane
+    spanish: el avión
+  - english: one way trip
+    spanish: vuelo de ida
+  - english: return trip
+    spanish: vuelo de ida y vuelta
+  - english: the passport
+    spanish: el pasaporte
+  - english: taxes
+    spanish: impuestos
+  - english: waiting room
+    spanish: sala de espera
+  - english: flight ticket
+    spanish: pasaje
+  - english: boarding pass
+    spanish: tarjeta de embarque
+  - english: customs
+    spanish: aduana
+  - english: suitcases
+    spanish: maletas/valijas
+  - english: bolso de mano
+    spanish: carry on bag
+  - english: luggage
+    spanish: equipaje
+  - english: hand luggage
+    spanish: equipaje de mano
+  - english: seat
+    spanish: asiento
+  - english: window
+    spanish: ventanilla
+  - english: aisle
+    spanish: pasillo
+  - english: gate
+    spanish: puerta
+  - english: to leave/to depart
+    spanish: salir
+  - english: to arrive
+    spanish: llegar
+  - english: departure time
+    spanish: horario de salida
+  - english: arrival time
+    spanish: horario de llegada
+  - english: captain
+    spanish: capitán
+  - english: air hostess
+    spanish: azafata
+  - english: airline
+    spanish: aerolínea
+  - english: it's delayed
+    spanish: está demorado

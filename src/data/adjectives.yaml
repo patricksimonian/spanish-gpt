@@ -1,0 +1,25 @@
+id: 3934fe55-5173-439c-a847-fc3b5832cdba
+name: Adjectives
+type: vocabulary
+spec: 
+  data:
+  - english: old
+    spanish: vieja/o
+  - english: young
+    spanish: joven
+  - english: short
+    spanish: bajo/a
+  - english: tall
+    spanish: alto/a
+  - english: thin
+    spanish: delgado/a
+  - english: fat
+    spanish: gordo/a
+  - english: ugly
+    spanish: feo/a
+  - english: pretty
+    spanish: bonito/a
+  - english: cute
+    spanish: lindo/a
+  - english: good looking
+    spanish: guapo/a

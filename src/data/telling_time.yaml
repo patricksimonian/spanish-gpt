@@ -1,0 +1,25 @@
+id: ce314b01-b8e9-4dfa-9e54-5f2995abd5a6
+name: Telling Time
+type: vocabulary
+spec: 
+  data:
+  - english: the clock/watch
+    spanish: el reloj
+  - english: hour
+    spanish: la hora
+  - english: minutes
+    spanish: el minuto
+  - english: second
+    spanish: el segundo
+  - english: the morning
+    spanish: la mañana
+  - english: the afternoon
+    spanish: la tarde
+  - english: the evening
+    spanish: la noche
+  - english: the early morning
+    spanish: la madrugada
+  - english: now
+    spanish: ahora/ahorito
+  - english: tomorrow
+    spanish: mañana

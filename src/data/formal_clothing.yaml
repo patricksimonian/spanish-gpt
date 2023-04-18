@@ -1,0 +1,31 @@
+id: ff4554-338b-4987-43aa-7c85afa785eb
+name: Formal Clothing
+type: vocabulary
+spec: 
+  data:
+  - english: pants/trousers
+    spanish: pantalones
+  - english: jacket
+    spanish: la chaqueta/el saco
+  - english: vest
+    spanish: el chaleco
+  - english: tie
+    spanish: el corbata
+  - english: shirt
+    spanish: la camisa
+  - english: shoes
+    spanish: los zapatos
+  - english: blouse
+    spanish: la blusa
+  - english: skirt
+    spanish: La falda/la pollera
+  - english: heels
+    spanish: tacos/tacones/zapatos de tacón
+  - english: dress
+    spanish: vestido
+  - english: contract
+    spanish: el contrato
+  - english: client
+    spanish: el/la cliente
+  - english: executive
+    spanish: ejecutivo

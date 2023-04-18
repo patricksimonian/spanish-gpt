@@ -1,0 +1,19 @@
+id: 87f0d6f0-cd8b-4467-83cf-ab399aeb3fb2
+name: Days of the Week
+type: vocabulary
+spec: 
+  data:
+  - english: monday
+    spanish: lunes
+  - english: tuesday
+    spanish: martes
+  - english: wednesday
+    spanish: miércoles
+  - english: thursday
+    spanish: jueves
+  - english: friday
+    spanish: viernes
+  - english: saturday
+    spanish: sábado
+  - english: sunday
+    spanish: domingo

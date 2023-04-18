@@ -1,0 +1,63 @@
+id: 2bbaf3de-6dd7-4723-9282-8f1e309fe5f6
+name: Parts of the Body
+type: vocabulary
+spec: 
+  data:
+  - english: the body
+    spanish: el cuerpo
+  - english: the hands
+    spanish: las manos
+  - english: the arms
+    spanish: los brazos
+  - english: the head
+    spanish: la cabeza
+  - english: the eyes
+    spanish: los ojos
+  - english: the neck
+    spanish: el cuello
+  - english: the shoulder
+    spanish: el hombro
+  - english: the stomach
+    spanish: el estómago
+  - english: the chest
+    spanish: el pecho
+  - english: the back
+    spanish: la espalda
+  - english: the legs
+    spanish: las piernas
+  - english: the feet
+    spanish: los pies
+  - english: the mouth
+    spanish: la boca
+  - english: the nose
+    spanish: la nariz
+  - english: the hair
+    spanish: el pelo/el cabello
+  - english: the teeth
+    spanish: los dientes
+  - english: the face
+    spanish: la cara
+  - english: the armpit
+    spanish: la axila
+  - english: the elbow
+    spanish: el codo
+  - english: the ears
+    spanish: los oídos
+  - english: the forearm
+    spanish: el antebrazo
+  - english: the wrist
+    spanish: la muñeca
+  - english: the fingers
+    spanish: los dedos
+  - english: nails
+    spanish: las uñas
+  - english: the fist
+    spanish: el puño
+  - english: waist
+    spanish: la cintura
+  - english: throat
+    spanish: la garganta
+  - english: molor teeth
+    spanish: las muelas
+  - english: the muscles
+    spanish: los músculos

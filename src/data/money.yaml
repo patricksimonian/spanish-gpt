@@ -1,0 +1,31 @@
+id: 30be73fa-98ab-4439-8fd6-deacd7f40826
+name: Money
+type: vocabulary
+spec: 
+  data:
+  - english: cash
+    spanish: efetivo
+  - english: money
+    spanish: dinero
+  - english: card
+    spanish: tarjeta
+  - english: credit card
+    spanish: tarjeta de crédito
+  - english: debit card
+    spanish: Tarjeta de débito
+  - english: Notes
+    spanish: Billetes
+  - english: cents
+    spanish: centavos
+  - english: cents (pence)
+    spanish: Céntimos
+  - english: Change as in money returned from a purchase
+    spanish: Vuelto
+  - english: Change as in money returned from a purchase
+    spanish: Vueltas
+  - english: Price
+    spanish: precio
+  - english: change, but as in a breakdown of money
+    spanish: Cambio
+  - english: Money Exchange
+    spanish: Casa de cambio

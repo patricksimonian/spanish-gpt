@@ -1,0 +1,83 @@
+name: Words of the City
+id: 87f0d6f0-cd8b-4467-83cf-ab399aebzz32
+type: vocabulary
+spec: 
+  data:
+  - english: the airport
+    spanish: el aeropuerto
+  - english: the bank
+    spanish: el banco
+  - english: the bar
+    spanish: el bar
+  - english: the hotel
+    spanish: el hotel
+  - english: the hospital
+    spanish: el hospital
+  - english: the pharmacy
+    spanish: la farmacia
+  - english: the drugstore
+    spanish: la drogería
+  - english: the train station
+    spanish: la estación de tren
+  - english: the bus stop
+    spanish: la parada del autobús
+  - english: the taxi stand
+    spanish: la parada de taxis
+  - english: atm
+    spanish: el cajero automático
+  - english: money exchange
+    spanish: la case da cambio
+  - english: the travel agency
+    spanish: la agencia de viajes
+  - english: the market
+    spanish: el mercado
+  - english: the supermarket
+    spanish: el supermercado
+  - english: the store (spain)
+    spanish: la tienda
+  - english: the store (south america)
+    spanish: el negocio
+  - english: the shopping center/mall
+    spanish: el centro commercial
+  - english: the warhouse
+    spanish: el almacén
+  - english: the butcher
+    spanish: la carnicería
+  - english: parking
+    spanish: el aparcamiento
+  - english: the park
+    spanish: el parque
+  - english: central plaza
+    spanish: la plaza central
+  - english: the police
+    spanish: la policía
+  - english: the cafeteria
+    spanish: la cafetería
+  - english: the mail
+    spanish: el correo
+  - english: the laundromat
+    spanish: la lavendería
+  - english: the swimming pool
+    spanish: la piscina
+  - english: the public washrooms
+    spanish: los baños públicos
+  - english: the movie theatre
+    spanish: el cine
+  - english: the museum
+    spanish: el museo
+  - english: the church
+    spanish: la iglesia
+  - english: main street
+    spanish: la calle principal
+  - english: avenue (street)
+    spanish: la avenida
+  - english: passageway
+    spanish: el pasaje
+  - english: city
+    spanish: la ciudad
+  - english: neighborhood
+    spanish: el barrio
+  - english: suburb
+    spanish: el suburbio
+  - english: district
+    spanish: el distrito

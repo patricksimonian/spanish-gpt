@@ -1,0 +1,37 @@
+id: fd123-338b-4987-43aa-7c85afa785eb
+name: Words from academics
+type: vocabulary
+spec: 
+  data:
+  - english: seminar
+    spanish: el semenario
+  - english: conference room
+    spanish: la salan de conferencia
+  - english: exhibition
+    spanish: la exposición
+  - english: university lecturer
+    spanish: el profesor universitario
+  - english: medicine class
+    spanish: la classe de medicina
+  - english: science
+    spanish: ciencias
+  - english: literature
+    spanish: literatura
+  - english: Information Technology
+    spanish: informática
+  - english: arts
+    spanish: arte
+  - english: what is your field?
+    spanish: cual es su área?
+  - english: research
+    spanish: investigación
+  - english: degree
+    spanish: diploma
+  - english: law degree
+    spanish: diploma de derecha
+  - english: architecture
+    spanish: arquitectura
+  - english: to teach
+    spanish: enseñar
+  - english: linguistics
+    spanish: lingúística

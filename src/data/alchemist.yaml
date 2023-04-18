@@ -1,0 +1,30 @@
+id: 439e88d9-4139-477a-a501-6f6827daf8bb
+name: Interesting words from the alchemist
+type: vocabulary
+spec: 
+  data:
+  - english: castle
+    spanish: castillo
+  - english: flock (as in a herd)
+    spanish: rebaño
+  - english: sailor
+    spanish: marinero
+  - english: seminar
+    spanish: seminario
+  - english: inexhaustable (as in never ending "el mundo es inagotable")
+    spanish: inagotable
+  - english: room
+    spanish: aposento
+  - english: the old lady (viejo/a means old)
+    spanish: la vieja
+  - english: napkins
+    spanish: servilletas
+  - english: plate
+    spanish: plato
+  - english: fork
+    spanish: tenedor
+  - english: spoon
+    spanish: cuchara
+  - english: knife
+    spanish: cuchillo
+  

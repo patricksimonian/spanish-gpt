@@ -1,0 +1,62 @@
+id: c9fc6326-f5a1-4ca7-8cce-303c29e75651
+name: Masculino o femenino? 
+type: multichoice
+spec:
+  answerTemplate:
+    A: masculino (el/los)
+    B: femenino (la/las)
+  data:
+  - question: mano 
+    english: hand
+    answer: B
+  - question: moto 
+    english: motorbike
+    answer: B
+  - question: foto 
+    english: photo
+    answer: B
+  - question: radio 
+    english: radio
+    answer: B
+  - question: calle 
+    english: street
+    answer: B
+  - question: gente 
+    english: people
+    answer: B
+  - question: carne 
+    english: meat
+    answer: B
+  - question: leche 
+    english: milk
+    answer: B
+  - question: llave 
+    english: key
+    answer: B
+  - question: miel 
+    english: honey
+    answer: B
+  - question: sal 
+    english: salt
+    answer: B
+  - question: piel 
+    english: skin
+    answer: B
+  - question: mapa 
+    english: map
+    answer: A
+  - question: tema 
+    english: topic
+    answer: A
+  - question: problema 
+    english: problem
+    answer: A
+  - question: sistema 
+    english: system
+    answer: A
+  - question: planeta 
+    english: planet
+    answer: A
+  - question: clima 
+    english: climate
+    answer: A

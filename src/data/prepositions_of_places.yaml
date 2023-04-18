@@ -1,0 +1,24 @@
+id: 8ccd68fd-7d2b-4325-863f-3ff09b70aea0
+name: Money
+type: vocabulary
+spec: 
+  data:
+  - english: to the left of
+    spanish: a la izquierda de
+  - english: to the right of
+    spanish: a la derecha de
+  - english: next to (definite article)
+    spanish: al lado de
+  - english: on one side of (next to)
+    spanish: a un lado de
+  - english: infront of
+    spanish: enfrente de
+  - english: in front of
+    spanish: al frente de
+  - english: between
+    spanish: entre
+  - english: close to
+    spanish: cerca de
+  - english: far from
+    spanish: lejos de
+  

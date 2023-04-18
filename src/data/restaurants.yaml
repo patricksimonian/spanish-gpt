@@ -1,0 +1,30 @@
+id: 18412435-5d37-49e8-b359-f371d5630b53
+name: Restaurants
+type: vocabulary
+spec: 
+  data:
+  - english: table
+    spanish: mesa
+  - english: chair
+    spanish: silla
+  - english: waitor
+    spanish: mesero/camerero
+  - english: wine glass
+    spanish: copa
+  - english: glass
+    spanish: vaso (vaso de agua)
+  - english: coffee cup
+    spanish: taza de café
+  - english: the bill
+    spanish: la cuenta
+  - english: napkins
+    spanish: servilletas
+  - english: plate
+    spanish: plato
+  - english: fork
+    spanish: tenedor
+  - english: spoon
+    spanish: cuchara
+  - english: knife
+    spanish: cuchillo
+  

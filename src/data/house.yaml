@@ -1,0 +1,7 @@
+id: e971cba3-cdef-4be2-a39a-0d631b84b8e4
+name: Parts of the hosue
+type: vocabulary
+spec: 
+  data:
+  - english: roof
+    spanish: techo

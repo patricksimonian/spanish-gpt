@@ -1,0 +1,31 @@
+id: 3251f798-338b-4987-43aa-7c85afa785eb
+name: Business
+type: vocabulary
+spec: 
+  data:
+  - english: order
+    spanish: la orden/ordenar
+  - english: delivery
+    spanish: la entrega/entregar
+  - english: payment
+    spanish: el pago
+  - english: budget
+    spanish: el presupuesto
+  - english: price
+    spanish: el precio
+  - english: documents
+    spanish: los documentos
+  - english: invoice
+    spanish: la factura
+  - english: estimate
+    spanish: La estimación
+  - english: profits
+    spanish: las ganacias
+  - english: sales
+    spanish: las ventas
+  - english: contract
+    spanish: el contrato
+  - english: client
+    spanish: el/la cliente
+  - english: executive
+    spanish: ejecutivo

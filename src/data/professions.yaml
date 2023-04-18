@@ -1,0 +1,44 @@
+id: 3251f798-338b-4987-43aa-7c85afa785eb
+name: Professions
+type: vocabulary
+spec: 
+  data:
+  - english: professions
+    spanish: profesiones
+  - english: doctor
+    spanish: doctor/doctora
+  - english: dentist
+    spanish: dentista
+  - english: psychologist
+    spanish: psicólogo/psicóloga
+  - english: engineer
+    spanish: ingeniero/ingeniera
+  - english: electrician
+    spanish: electricista
+  - english: journalist
+    spanish: periodista
+  - english: nurse
+    spanish: enfermero/enfermera
+  - english: teacher
+    spanish: maestro/maestra
+  - english: professor
+    spanish: profesor/profesora
+  - english: accountant
+    spanish: contador/contadora
+  - english: lawyer
+    spanish: abogado/abogada
+  - english: designer
+    spanish: diseñador/diseñadora
+  - english: financial consultant
+    spanish: consultor financiero/consultora financiera
+  - english: secretary
+    spanish: secretario/secretaria
+  - english: shop assistant
+    spanish: asistente de ventas
+  - english: plumber
+    spanish: plomero
+  - english: chef/cook
+    spanish: cocinero/cocinera/chef
+  - english: entrepenuer
+    spanish: empresario/empresaria
+  

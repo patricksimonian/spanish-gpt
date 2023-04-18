@@ -1,0 +1,81 @@
+name: Los Numeros Ordinales
+id: 88fd931b-e49f-4c8a-33ae -4c53b236b67c
+type: vocabulary
+spec:
+  data: 
+    - front: primera/o/as/os 
+      back: first 
+    - front: segundo/a/as/os
+      back: second
+    - front: tercero
+      back: third 
+    - front: cuarto 
+      back: fourth 
+    - front: quinto/a/os/as
+      back: fifth
+    - front: sexto 
+      back: sixth 
+    - front: séptimo
+      back: seventh 
+    - front: octavo/a/as/os
+      back: eigth 
+    - front: noveno
+      back: ninth
+    - front: décimo/a/os/as
+      back: tenth
+    - front: decimoprimero / undécimo
+      back: eleventh
+    - front: decimosegundo / duodécimo
+      back: twelvth
+    - front: decimotercero
+      back: thirteenth
+    - front: decimocuarto
+      back: fourteenth
+    - front: decimoquinto
+      back: fifteenth
+    - front: decimosexto
+      back: sixteenth
+    - front: decimoséptimo
+      back: seventeenth
+    - front: decimoctavo
+      back: eighteenth
+    - front: decimonoveno
+      back: nineteenth
+    - front: vigésimo
+      back: twentieth
+    - front: trigésimo
+      back: thirtieth
+    - front: cuadragésimo
+      back: fourtieth
+    - front: quincuagésimo
+      back: fiftieth
+    - front: sexagésimo
+      back: sixtieth
+    - front: septuagésimo
+      back: seventieth
+    - front: octogésimo
+      back: eightieth
+    - front: nonagésimo
+      back: nintieth
+    - front: centésimo
+      back: one hundreth
+    - front: ducentésimo
+      back: two hundreth
+    - front: tricentésimo
+      back: three hundreth
+    - front: cuadringentésimo
+      back: four hundreth
+    - front: quingentésimo
+      back: five hundreth
+    - front: sexcentésimo
+      back: six hundreth
+    - front: septingentésimo
+      back: seven hundreth
+    - front: octingentésimo
+      back: eight hundreth
+    - front: noningentésimo
+      back: nine hundreth
+    - front: milésimo
+      back: thousandth
+    - front: los cinco primeros días
+      back: the first 5 days

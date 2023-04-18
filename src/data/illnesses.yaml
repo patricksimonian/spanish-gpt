@@ -1,0 +1,21 @@
+id: 82565b14-ee75-4163-9f7c-b62c917da2a8
+name: Going to the hospital
+type: vocabulary
+spec: 
+  data:
+  - english: flu
+    spanish: gripe
+  - english: a cold
+    spanish: un resfrío
+  - english: fever
+    spanish: fiebre
+  - english: cough
+    spanish: tos
+  - english: nausea
+    spanish: nauseas / vómitos
+  - english: diarea
+    spanish: diarrea
+  - english: i have pain (pain of)
+    spanish: tengo dolor (de)
+  - english: I have a headache
+    spanish: me duele la cabeza

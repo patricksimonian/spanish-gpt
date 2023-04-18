@@ -1,0 +1,29 @@
+id: 34e850c1-30c9-4911-9c62-523e0096e0fa
+name: Months of the Year
+type: vocabulary
+spec: 
+  data:
+  - english: january
+    spanish: enero
+  - english: february
+    spanish: febrero
+  - english: march
+    spanish: marzo
+  - english: april
+    spanish: abril
+  - english: may
+    spanish: mayo
+  - english: june
+    spanish: junio
+  - english: july
+    spanish: julio
+  - english: august
+    spanish: agosto
+  - english: september
+    spanish: septiembre
+  - english: october
+    spanish: octubre
+  - english: november
+    spanish: noviembre
+  - english: december
+    spanish: diciembre

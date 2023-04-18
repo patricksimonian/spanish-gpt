@@ -1,0 +1,44 @@
+id: 5db27729-2bed-4a65-8110-240c006fc584
+name: Public Transit
+type: vocabulary
+spec: 
+  data:
+  - english: train
+    spanish: el tren
+  - english: station
+    spanish: la estación
+  - english: subway
+    spanish: el metro/el subte
+  - english: ticket office
+    spanish: la boletería
+  - english: ticket
+    spanish: el boleto/el pasaje
+  - english: one way
+    spanish: ida
+  - english: round-trip
+    spanish: ida y vuelta
+  - english: platform
+    spanish: la plataforma
+  - english: passenger
+    spanish: el pasajero
+  - english: bus
+    spanish: el autobús
+  - english: taxi
+    spanish: el taxi
+  - english: terminal
+    spanish: la terminal
+  - english: bus stop
+    spanish: la parada de autobuses
+  - english: taxi stand
+    spanish: la parada de taxi
+  - english: taxi driver
+    spanish: taxista
+  - english: taxi meter
+    spanish: taxímetro
+  - english: to call a taxi
+    spanish: llamar a un taxi
+  - english: to take a taxi
+    spanish: tomar un taxi/cojer un taxi
+  - english: tip
+    spanish: propina
+    

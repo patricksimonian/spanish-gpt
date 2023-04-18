@@ -1,0 +1,161 @@
+id: 3e97a7ca-4f73-4b58-80f6-a4b28996adf8
+name: Verbs in Infinitive
+type: vocabulary
+spec: 
+  data:
+  - english: to darken
+    spanish: oscurecer
+  - english: to resolve
+    spanish: resolver
+  - english: to sheer
+    spanish: trasquilar
+  - english: to avoid
+    spanish: evitar
+  - english: to want/desire
+    spanish: desear
+  - english: to be surprised
+    spanish: sorprenderse
+  - english: to surprise
+    spanish: sorprender
+  - english: to lead
+    spanish: conducir
+  - english: to complain/moan/whine
+    spanish: quejarse
+  - english: to reserve
+    spanish: reservar
+  - english: to serve
+    spanish: servir
+  - english: to deceive
+    spanish: engañar
+  - english: to land (like a plane)
+    spanish: aterrizar
+  - english: to stay/to remain in place
+    spanish: quedarse
+  - english: to declare
+    spanish: declarar
+  - spanish: firmar
+    english: to sign (like a contract)
+  - spanish: acordar
+    english: to agree (upon)
+  - spanish: arrepentir
+    english: to regret
+  - spanish: defender
+    english: to defend
+  - spanish: despertar
+    english: to wake up
+  - spanish: divertir
+    english: to have fun
+  - spanish: empezar
+    english: to start
+  - spanish: entender
+    english: to understand
+  - spanish: gobernar
+    english: to govern
+  - spanish: herir
+    english: to hurt
+  - spanish: mentir
+    english: to lie
+  - spanish: pensar
+    english: to think
+  - spanish: perder
+    english: to lose
+  - spanish: quebrar
+    english: to break
+  - spanish: querer
+    english: to want
+  - spanish: sentir
+    english: to feel
+  - spanish: almorzar
+    english: to have lunch
+  - spanish: dormir
+    english: to sleep
+  - spanish: encontrar
+    english: to find
+  - spanish: morir
+    english: to die
+  - spanish: poder
+    english: to be able to
+  - spanish: probar
+    english: to try
+  - spanish: recordar
+    english: to remember
+  - spanish: agregar
+    english: to add
+  - spanish: soler
+    english: to usually do something/ to be accustomed to
+  - spanish: soñar
+    english: to dream
+  - spanish: volar
+    english: to fly
+  - spanish: volver
+    english: to return
+  - spanish: competir
+    english: to compete
+  - spanish: elegir
+    english: to choose
+  - spanish: medir
+    english: to measure
+  - spanish: repetir
+    english: to repeat
+  - spanish: seguir
+    english: to follow
+  - spanish: servir
+    english: to serve
+  - spanish: vestir
+    english: to dress
+  - spanish: jugar
+    english: to play
+  - spanish: agradecer
+    english: to thank
+  - spanish: nacer
+    english: to be born
+  - spanish: crecer
+    english: to grow
+  - spanish: ofrecer
+    english: to offer
+  - spanish: conducir
+    english: to drive
+  - spanish: parecer
+    english: to seem
+  - spanish: conocer
+    english: to know
+  - spanish: seducir
+    english: to seduce
+  - spanish: merecer
+    english: to deserve
+  - spanish: tratar
+    english: to treat (medicine or behavior, to deal with)
+  - spanish: traer
+    english: to bring (to transport), to carry (to contain), to wear 
+  - spanish: despertarse
+    english: to wake up
+  - spanish: levantarse
+    english: to get up
+  - spanish: bañarse
+    english: to take a bath
+  - spanish: ducharse
+    english: to take a shower
+  - spanish: peinarse
+    english: to comb one's hair
+  - spanish: lavarse
+    english: to wash oneself
+  - spanish: secarse
+    english: to dry oneself
+  - spanish: cepillarse
+    english: to brush one's teeth/hair
+  - spanish: afeitarse
+    english: to shave
+  - spanish: maquillarse
+    english: to put on makeup
+  - spanish: ponerse
+    english: to put on
+  - spanish: cortarse
+    english: to cut one's hair
+  - spanish: pintarse
+    english: to paint or dye one's hair
+  - spanish: vestirse
+    english: to get dressed
+  - spanish: echarse
+    english: to lie down
+  - spanish: esquilarse
+    english: to shear

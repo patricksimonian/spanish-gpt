@@ -1,0 +1,43 @@
+id: 8892931b-e49f-4c8a-bd73-4c53b236b67c
+name: Food
+type: vocabulary
+spec: 
+  data:
+  - english: sandwich
+    spanish: el emparedado
+  - english: onion
+    spanish: la cebolla
+  - english: bread
+    spanish: el pan
+  - english: chicken
+    spanish: el pollo
+  - english: cheese
+    spanish: el queso
+  - english: wine
+    spanish: el vino
+  - english: beer
+    spanish: la cerveza
+  - english: hamburgers
+    spanish: las hamburguesas
+  - english: meat
+    spanish: la carne
+  - english: Coffee
+    spanish: El café
+  - english: french fries
+    spanish: las papas fritas
+  - english: french fries (Spain)
+    spanish: las patatas fritas
+  - english: rice
+    spanish: el arroz
+  - english: Seafood
+    spanish: los mariscos
+  - english: drinks
+    spanish: las bebidas 
+  - english: fish
+    spanish: el pescado
+  - english: vegetables
+    spanish: los vegetales
+  - english: tea
+    spanish: té
+  - english: pancake
+    spanish: el panqueque

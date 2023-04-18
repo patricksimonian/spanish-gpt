@@ -1,0 +1,13 @@
+id: 29d74856-f5f4-419f-9d3d-f988ff75728a
+name: Interesting vocabulary
+type: vocabulary
+spec: 
+  data:
+  - english: waterfalls
+    spanish: las cataratas
+  - english: coat
+    spanish: abrigo
+  - english: shopping cart
+    spanish: carrito
+  - english: dreamer
+    spanish: soñador

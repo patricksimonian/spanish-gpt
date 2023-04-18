@@ -1,0 +1,24 @@
+id: 272b0aa7-5e2c-49b7-ad8a-9ee9075f1818
+name: Hotel
+type: vocabulary
+spec: 
+  data:
+  - english: room
+    spanish: habitacíon 
+  - english: double bed
+    spanish: cama doble
+  - english: single bed
+    spanish: cama simple/sencilla
+  - english: check in/out
+    spanish: check in/out
+  - english: keys
+    spanish: llaves
+  - english: towel
+    spanish: toalla
+  - english: bathroom
+    spanish: el baño
+  - english: internet/wifi
+    spanish: internet/wifi
+  - english: breakfast included
+    spanish: desayuno incluido
+ 

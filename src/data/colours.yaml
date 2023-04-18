@@ -1,0 +1,30 @@
+id: 454aass-5e2c-49b7-ad8a-9ee9075f1818
+name: The colours
+type: vocabulary
+spec: 
+  data:
+  - english: yellow
+    spanish: amarillo
+  - english: red
+    spanish: rojo
+  - english: brown
+    spanish: marrón
+  - english: green
+    spanish: verde
+  - english: blue
+    spanish: azul
+  - english: white
+    spanish: blanco
+  - english: black
+    spanish: negro
+  - english: grey
+    spanish: gris
+  - english: orange
+    spanish: naranja
+  - english: pink
+    spanish: rosa/rosado
+  - english: purple
+    spanish: violeta
+  - english: beige
+    spanish: crema/beige
+ 
