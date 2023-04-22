@@ -15,8 +15,9 @@ export default function handler(req: { query: { id: string | number } }, res: { 
     } = files.reduce((acc: {[key: string]: languageFile}, file: string) => {
         const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
         const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
-        
-      acc[yamlData.id] = yamlData
+        if(yamlData.type === 'vocabulary') {
+            acc[yamlData.id] = yamlData
+        }
       return acc;
     }, {})
 
