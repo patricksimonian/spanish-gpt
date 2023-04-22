@@ -62,7 +62,7 @@ function Flashcard() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <main className="flex min-h-screen pt-5 flex-col items-center justify-center bg-gradient-to-b from-[#003333] to-[#15162c]">
-            <h1 className="text-5xl center text-white mb-10">{flashcardData.name}</h1>
+            <h1 className="text-5xl text-center text-white mb-10">{flashcardData.name}</h1>
             <div className="flex items-center  flex-wrap ">
               <div className='flex justify-center sm:justify-start mx-auto mb-5'>
                 <Link className="text-lg sm:text-2xl text-white rounded-lg cursor-pointer border-2 py-2 px-4" href="/">Back</Link>
