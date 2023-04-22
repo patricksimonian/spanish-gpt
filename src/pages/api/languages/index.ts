@@ -3,15 +3,17 @@ import path from "path";
 import yaml from 'yaml';
 
 export type vocabularyInterface = {
-    english: string;
-    spanish: string;
+    data: Array<{
+        english: string;
+        spanish: string;
+    }>
 }
 
 export type languageFile = {
     id: string,
     type: string,
     name: string
-    spec: Array<vocabularyInterface> | null
+    spec: vocabularyInterface
 }
 
 export type LanguageRes = Array<{

@@ -1,12 +1,12 @@
 import React from 'react';
 import Flashcard from './Flashcard';
 
-function FlashcardGrid({ cards }) {
+function FlashcardGrid({ cards }: { cards: Array<{spanish: string, english: string}>}) {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap">
       {cards.map((card, index) => (
         <div key={index} className="m-4">
-          <Flashcard english={card.english} spanish={card.spanish} />
+          <Flashcard front={card.english} back={card.spanish} />
         </div>
       ))}
     </div>

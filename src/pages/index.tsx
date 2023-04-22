@@ -4,18 +4,8 @@ import yaml from 'yaml';
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
+import { languageFile } from "./api/languages";
 
-export type vocabularyInterface = {
-  english: string;
-  spanish: string;
-}
-
-export type languageFile = {
-  id: string,
-  type: string,
-  name: string
-  spec: Array<vocabularyInterface> | null
-}
 
 export type LanguageRes = Array<{
   id: string,

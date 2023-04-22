@@ -1,0 +1,23 @@
+id: 82565b14-ee75-4163-9f7c-b62c917da2a8
+name: Greetings 
+type: vocabulary
+spec: 
+  data:
+  - english: Hey!
+    spanish: ¡Oye!
+  - english: What's up?
+    spanish: ¿Qué tal? (formal)
+  - english: How's it going?
+    spanish: ¿Cómo va todo? (formal)
+  - english: What's new?
+    spanish: ¿Qué hay de nuevo? (informal)
+  - english: Long time no see!
+    spanish: ¡Cuánto tiempo sin verte! (formal)
+  - english: Nice to meet you!
+    spanish: ¡Encantado/a de conocerte! (formal)
+  - english: whats been going on with your life?
+    spanish: ¿Qué es de tu vida? (informal)
+  - english: es como como va todo per mas informal
+    spanish: Cómo andas? (informal)
+  - english: Esta expresión es muy informal. Se utiliza solo cuando hay un alto grado de confianza. Y como en el caso del ¿qué tal?, tampoco esperamos una respuesta por la otra persona. Se utiliza como un saludo.
+    spanish: ¿Qué pasa? (informal)

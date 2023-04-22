@@ -3,6 +3,8 @@ name: Parts of the Body
 type: vocabulary
 spec: 
   data:
+  - english: the belly
+    spanish: barriga
   - english: the body
     spanish: el cuerpo
   - english: the hands
@@ -35,12 +37,32 @@ spec:
     spanish: el pelo/el cabello
   - english: the teeth
     spanish: los dientes
+  - english: knees
+    spanish: los rodillas
+  - english: ankles
+    spanish: los tobillos
   - english: the face
     spanish: la cara
   - english: the armpit
     spanish: la axila
   - english: the elbow
     spanish: el codo
+  - english: bones
+    spanish: huesos
+  - english: lungs
+    spanish: pulmones
+  - english: intestines
+    spanish: intestino
+  - english: liver
+    spanish: hígado
+  - english: kidneys
+    spanish: los riñones
+  - english: brain
+    spanish: el cerebro
+  - english: nervous system
+    spanish: los nervios
+  - english: arteries
+    spanish: las arterias
   - english: the ears
     spanish: los oídos
   - english: the forearm
@@ -57,7 +79,12 @@ spec:
     spanish: la cintura
   - english: throat
     spanish: la garganta
+  - english: traquia
+    spanish: la tráquea
   - english: molor teeth
     spanish: las muelas
   - english: the muscles
     spanish: los músculos
+  - english: joints
+    spanish: articulación
+    
