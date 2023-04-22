@@ -11,6 +11,7 @@ export type LanguageRes = Array<{
   id: string,
   name: string,
   file: string,
+  numCards: number,
 }>
 function Home({ langauges }: { langauges: LanguageRes; }) {
 
@@ -33,13 +34,13 @@ function Home({ langauges }: { langauges: LanguageRes; }) {
           {
             langauges.map(l => (
               <Link
-                className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
+                className="flex relative max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
                 href={`/flashcards/${l.id}`}
               
                 key={l.id + l.file}
               >
                 <h3 className="text-2xl font-bold">{l.name}</h3>
-                
+                <span className="absolute bottom-0 z-10 right-0 text-[10px] text-white pr-2 pb-0.5">{l.numCards}</span>
               </Link>
 
             ))
@@ -62,7 +63,8 @@ export function getServerSideProps() {
         return {
             file,
             name: yamlData.name,
-            id: yamlData.id
+            id: yamlData.id,
+            numCards: yamlData.spec.data.length
         }
     })
   return { props: { langauges: data } };
