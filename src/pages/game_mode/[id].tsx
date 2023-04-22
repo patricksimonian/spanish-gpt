@@ -36,8 +36,8 @@ function GameModePage() {
             setFlashcardData(d.data)
         }
     }
-    if(!fetched) {
-
+    
+    if(!fetched && !flashcardData) {
         getAndSetFlashCardData().catch(() => null)
         setFetched(true)
     }

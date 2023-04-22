@@ -30,7 +30,7 @@ function Flashcard() {
         }
       }
     }
-    if(!fetched) {
+    if(!fetched || !flashcardData) {
 
         getAndSetFlashCardData().catch(() => null)
         setFetched(true)
