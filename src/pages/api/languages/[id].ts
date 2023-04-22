@@ -1,6 +1,6 @@
 import { readFileSync, readdirSync } from "fs"
 import path from "path"
-import { languageFile } from "."
+import type { languageFile } from "."
 import yaml from 'yaml'
 
 
@@ -14,7 +14,7 @@ export default function handler(req: { query: { id: string | number } }, res: { 
         [key: string]: languageFile
     } = files.reduce((acc: {[key: string]: languageFile}, file: string) => {
         const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
-        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString())
+        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
         
       acc[yamlData.id] = yamlData
       return acc;

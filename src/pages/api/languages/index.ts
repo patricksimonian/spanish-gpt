@@ -23,12 +23,12 @@ export type LanguageRes = Array<{
 }>
 
 
-export default function handler(req, res) {
+export default function handler(_req: unknown, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { data: { file: string; name: string; id: string; }[]; }): void; new(): any; }; }; }): void {
     const files = readdirSync( path.join(process.cwd(), 'src', 'data'))
 
     const data = files.map(file => {
         const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
-        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString())
+        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
         
         return {
             file,

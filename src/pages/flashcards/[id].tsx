@@ -1,12 +1,9 @@
-import { readFileSync, readdirSync } from "fs";
 import React, { useEffect, useMemo, useState } from 'react';
-import { type NextPage } from "next";
-import yaml from 'yaml';
 import Head from "next/head";
 import { useRouter } from "next/router";
 import FlashcardGrid from "../../components/FlashcardGrid";
 import Link from "next/link";
-import { languageFile } from "../api/languages";
+import { type languageFile } from "../api/languages";
 import { shuffle } from "~/utils/array";
 
 
@@ -19,38 +16,37 @@ enum OrderType {
 function Flashcard() {
   const [flashcardData, setFlashcardData] = useState<languageFile>();
   const [ fetched, setFetched] = useState(false)
-  const [ cardCorrect, setCardsCorrect ] = useState<Array<string>>([]);
-  const [ cardIncorrect, setCardsIncorrect ] = useState<Array<string>>([]);
-  const [ randomized, setRandomized ] = useState(false);
   const [ orderType, setOrderType ] = useState(OrderType.ORDERED)
 
   const router = useRouter()
   const { id } = router.query
   useEffect(() => {
     const getAndSetFlashCardData = async () => {
-        const res = await fetch(`/api/languages/${id}`)
+      if(id) {
+        const res = await fetch(`/api/languages/${id as string}`)
         if(res.status === 200) {
-            const d: {data: languageFile} =  await res.json()
+            const d: {data: languageFile} =  await res.json() as {data: languageFile}
             setFlashcardData(d.data)
         }
+      }
     }
     if(!fetched) {
 
-        getAndSetFlashCardData()
+        getAndSetFlashCardData().catch(() => null)
         setFetched(true)
     }
-  }, [flashcardData])
+  }, [fetched, flashcardData, id])
 
   const cards = useMemo(() => {
     if(flashcardData !== undefined) {
-        const cards = flashcardData!.spec.data.map(d => ({...d}));
+        const cards = flashcardData.spec.data.map(d => ({...d}));
         switch(orderType) {
           case OrderType.ORDERED:
             return cards
           case OrderType.ORDERED_REVERSE:
             return cards.reverse()
           case OrderType.SHUFFLED:
-            return shuffle(cards)
+            return shuffle(cards) as {english: string, spanish: string}[]
         }
     } else {
       return []
@@ -69,7 +65,7 @@ function Flashcard() {
             <h1 className="text-5xl center text-white mb-10">{flashcardData.name}</h1>
             <div className="flex items-center w-max">
               <Link className="text-2xl text-white rounded-lg cursor-pointer border-2 py-2 px-4" href="/">Back</Link>
-              <Link className="text-2xl text-blue-500 rounded-lg cursor-pointer py-2 px-4" href={`/game_mode/${id}`}>Game Mode</Link>
+              <Link className="text-2xl text-blue-500 rounded-lg cursor-pointer py-2 px-4" href={`/game_mode/${id as string}`}>Game Mode</Link>
             
               <span className="text-xl ml-5 text-white">Card Order:</span>
               {
@@ -79,7 +75,7 @@ function Flashcard() {
                 })
               }
             </div>
-            <FlashcardGrid cards={cards} handleCardCorrect={(id: string) => setCardsCorrect((cards: Array<string>) => cards.concat(id))} handleCardIncorrect={(id: string) => setCardsCorrect((cards: Array<string>) => cards.concat(id))}/>
+            <FlashcardGrid cards={cards} />
           </main>
         </>
       );
@@ -92,8 +88,5 @@ function Flashcard() {
   }
 }
 
-export async function getServerSideProps( {req}) {
 
-  return { props: {  } };
-}
 export default Flashcard;

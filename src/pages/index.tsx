@@ -4,7 +4,7 @@ import yaml from 'yaml';
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
-import { languageFile } from "./api/languages";
+import { type languageFile } from "./api/languages";
 
 
 export type LanguageRes = Array<{
@@ -52,12 +52,12 @@ function Home({ langauges }: { langauges: LanguageRes; }) {
   );
 }
 
-export async function getServerSideProps() {
+export function getServerSideProps() {
   const files = readdirSync( path.join(process.cwd(), 'src', 'data'))
 
     const data = files.map(file => {
         const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
-        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString())
+        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
         
         return {
             file,

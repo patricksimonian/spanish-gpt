@@ -1,14 +1,10 @@
-import { readFileSync, readdirSync } from "fs";
 import React, { useEffect, useMemo, useState } from 'react';
-import { type NextPage } from "next";
-import yaml from 'yaml';
 import Head from "next/head";
 import { useRouter } from "next/router";
 import FlashcardGrid from "../../components/FlashcardGrid";
 import Link from "next/link";
-import { languageFile, vocabularyInterface } from "../api/languages";
+import { type languageFile } from "../api/languages";
 import { shuffle } from "~/utils/array";
-import { nextTick } from "process";
 import Flashcard from "~/components/Flashcard";
 
 enum GameState {
@@ -16,11 +12,16 @@ enum GameState {
   STARTED = "STARTED",
   REVIEW = "REVIEW"
 }
+
+interface vocab {
+  spanish: string
+  english: string
+}
 function GameModePage() {
   const [flashcardData, setFlashcardData] = useState<languageFile>();
   const [ fetched, setFetched] = useState(false)
-  const [ cardsRight, setCardsRight ] = useState<Array<{spanish: string, english: string}>>([]);
-  const [ cardsWrong, setCardsWrong ] = useState<Array<{spanish: string, english: string}>>([]);
+  const [ cardsRight, setCardsRight ] = useState<Array<vocab>>([]);
+  const [ cardsWrong, setCardsWrong ] = useState<Array<vocab>>([]);
   const [ nextCard, setNextCard ] = useState<number | null>(null)
   const [ displayConfig, setDisplayConfig] = useState({front: "spanish", back: "english"})
   const [ gameState, setGameState ] = useState(GameState.INIT)
@@ -29,25 +30,25 @@ function GameModePage() {
 
   useEffect(() => {
     const getAndSetFlashCardData = async () => {
-        const res = await fetch(`/api/languages/${id}`)
+        const res = await fetch(`/api/languages/${id as string}`)
         if(res.status === 200) {
-            const d: {data: languageFile} =  await res.json()
+            const d: {data: languageFile} =  await res.json() as {data:  languageFile}
             setFlashcardData(d.data)
         }
     }
     if(!fetched) {
 
-        getAndSetFlashCardData()
+        getAndSetFlashCardData().catch(() => null)
         setFetched(true)
     }
-  }, [flashcardData])
+  }, [fetched, flashcardData, id])
 
-  const cards: Array<vocabularyInterface> = useMemo(() => {
+  const cards: vocab[] = useMemo(() => {
     if(flashcardData !== undefined) {
-      return shuffle(flashcardData.spec.data)
+      return shuffle(flashcardData.spec.data) as vocab[]
     }
     return []
-  }, [ flashcardData])
+  }, [ flashcardData]) 
   
   let content = null;
   switch(gameState) {
@@ -60,22 +61,23 @@ function GameModePage() {
     </div>)
     break;
     case GameState.STARTED:
+      const card = cards[nextCard as number] as vocab
       content = (<>
-        <Flashcard front={cards[nextCard][displayConfig.front]} back={cards[nextCard][displayConfig.back]} />
+        <Flashcard front={card[displayConfig.front as "spanish" | "english"]} back={card[displayConfig.back as "spanish" | "english"]} />
         <div className="flex items-center text-2xl justify-between mt-6">
           <button onClick={() => {
-            setCardsRight(cardsRight.concat(cards[nextCard]))
-            if(nextCard + 1 < cards.length) {
-              setNextCard(nextCard + 1)
+            setCardsRight(cardsRight.concat(card))
+            if(nextCard as number + 1 < cards.length) {
+              setNextCard(nextCard as number + 1)
             } else {
               setNextCard(null)
               setGameState(GameState.REVIEW)
             }
           }} className="px-4 border-sky-100 border-2 m-2 py-2 text-2xl rounded-md cursor-pointer text-green-400">Right</button>
           <button onClick={() => {
-            setCardsWrong(cardsWrong.concat(cards[nextCard]))
-            if(nextCard + 1 < cards.length) {
-              setNextCard(nextCard + 1)
+            setCardsWrong(cardsWrong.concat(card))
+            if(nextCard as number + 1 < cards.length) {
+              setNextCard(nextCard as number + 1)
             } else {
               setNextCard(null)
               setGameState(GameState.REVIEW)
@@ -112,7 +114,7 @@ function GameModePage() {
             <h1 className="text-5xl center text-white mb-10">{flashcardData.name}</h1>
             <div>
               <Link className="text-2xl text-white rounded-lg cursor-pointer border-2 py-2 px-4" href="/">Back</Link>
-              <Link className="text-2xl text-blue-500 rounded-lg cursor-pointer py-2 px-4" href={`/flashcards/${id}`}>Back to Studying</Link>
+              <Link className="text-2xl text-blue-500 rounded-lg cursor-pointer py-2 px-4" href={`/flashcards/${id as string}`}>Back to Studying</Link>
               <button onClick={() => {
                 const config = {
                   front: "spanish",
