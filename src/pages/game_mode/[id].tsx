@@ -93,7 +93,8 @@ function GameModePage() {
         </div>)
       } else {
         content = (
-          <div className="max-w-4xl  overflow-auto">
+          <div className="flex flex-col">
+            <div className='text-white text-center'>Tenias {cardsWrong.length} tarjetas incorectas. Ver abajo para revisarlos</div>
             <FlashcardGrid cards={cardsWrong}/>
 
           </div>
@@ -112,9 +113,9 @@ function GameModePage() {
           </Head>
           <main className="flex min-h-screen pt-5 flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
             <h1 className="text-5xl center text-white mb-10">{flashcardData.name}</h1>
-            <div>
-              <Link className="text-2xl text-white rounded-lg cursor-pointer border-2 py-2 px-4" href="/">Back</Link>
-              <Link className="text-2xl text-blue-500 rounded-lg cursor-pointer py-2 px-4" href={`/flashcards/${id as string}`}>Back to Studying</Link>
+            <div className='flex justify-center sm:justify-start items-center px-3'>
+              <Link className="text-lg text-center mx-1 sm:text-2xl text-white rounded-lg cursor-pointer border-2 py-2 px-4" href="/">Back</Link>
+              <Link className="text-lg text-center mx-1 sm:text-2xl text-blue-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4" href={`/flashcards/${id as string}`}>Back to Studying</Link>
               <button onClick={() => {
                 const config = {
                   front: "spanish",
@@ -126,7 +127,7 @@ function GameModePage() {
                 }
 
                 setDisplayConfig(config)
-              }} className="text-2xl text-green-500 rounded-lg cursor-pointer py-2 px-4">Toggle front from {displayConfig.front} to {displayConfig.back}</button>
+              }} className="text-lg text-center mx-1 sm:text-2xl text-green-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4">Toggle faces</button>
               
             </div>
             <div className="flex justify-between items-center text-3xl p-4">
@@ -139,7 +140,7 @@ function GameModePage() {
                 <div className="text-red-400">{cardsWrong.length}</div>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center w-max h-96">
+            <div className="flex flex-col items-center justify-center">
               {cards && content}
             </div>
             
