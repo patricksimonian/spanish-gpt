@@ -1,0 +1,18 @@
+id: 2312aaa-341a-4b58-80f6-34111asd
+name: Respuestas a Presentarios
+type: vocabulary_review
+spec:
+  title: Different ways of saying ¿estoy bien?
+  data:
+  - phrase: ¡Ahí vamos!
+    info: Es una respuesta neutral al “¿cómo estás? No quiero dar detalles y respondo con ¡Ahí vamos! Tiene un punto de resignación. 
+  - phrase: Bueno, tirando… (o aquí tirando / tirandillo)
+    info: Esta respuesta tiene una connotación negativa, pesimista o triste. 
+  - phrase: ¡De puta madre!
+    info: Esta forma es muy frecuente y se utiliza en contextos muy informales, entre amigos. Significa que estás súper bien, muy bien. Recuerda no usarla en contextos formales.  
+  - phrase: Bien, no me puedo quejar (o no me puedo quejar)
+    info: Ni bien ni mal, estás normal. Las cosas no van mal, pero refleja algo de rutina.
+  - phrase: Estupendamente (o genial / fenomenal / ¡de maravilla!) 
+    info: Cualquiera de estas formas son maneras optimistas de decir que estás muy bien.
+  - phrase: No podría estar mejor
+    info: Esta también es una forma muy optimista de decir que estás muy bien, pero suele usarse en contextos de mucha alegría como cuando estás con tu familia, en un evento importante, etc.

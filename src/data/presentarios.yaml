@@ -1,0 +1,69 @@
+id: 2312aaa-4f73-4b58-80f6-34111asd
+name: Presentarios
+type: vocabulary_review
+spec:
+  title: Different ways of saying ¿cómo estás?
+  data:
+  - phrase: ¿cómo estás?
+    info: null
+  - phrase: qué tal
+    info: null
+  - phrase: cómo va todo
+    info: null
+  - phrase: cómo has estado
+    info: null
+  - phrase: ¿Qué hay de nuevo?
+  - phrase: ¿Qué has hecho?
+  - phrase: cómo van las cosas
+    info: null
+  - phrase: cómo te ha ido
+    info: null
+  - phrase: cómo está usted 
+    info: formal
+  - phrase: cómo está 
+    info: formal
+  - phrase: cómo le va 
+    info: formal
+  - phrase: qué hay 
+    info: "*pronunciar como ki-ay*, es informal"
+  - phrase: cómo andas
+    info: informal
+  - phrase: cómo vas
+    info: informal
+  - phrase: qué cuenta pues
+    info: en colombia
+  - phrase: qué se dice
+    info: en colombia
+  - phrase: qué más
+    info: en colombia
+  - phrase: qué más pues
+    info: en colombia
+  - phrase: qué hubo (kiubo)
+    info: en colombia
+  - phrase: qué qué más parcero
+    info: en colombia
+  - phrase: qué hubo pues
+    info: en colombia
+  - phrase: bien o no?
+    info: en colombia
+  - phrase: bien o qué
+    info: en colombia
+  - phrase: todo bien?
+    info: en colombia
+  - phrase: cómo vamos pues
+    info: en colombia
+  - phrase: qué onda
+    info: en mexico
+  - phrase: qué pasa tio
+    info: en spain
+  - phrase: cómo andás
+    info: en argentina 
+
+
+
+
+
+
+
+
+
