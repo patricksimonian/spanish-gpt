@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from "next/head";
 import { useRouter } from "next/router";
 import FlashcardGrid from "../../components/FlashcardGrid";
@@ -25,8 +25,25 @@ function GameModePage() {
   const [ nextCard, setNextCard ] = useState<number | null>(null)
   const [ displayConfig, setDisplayConfig] = useState({front: "spanish", back: "english"})
   const [ gameState, setGameState ] = useState(GameState.INIT)
+  const [ time, setTime] = useState<number | null>(null)
+  const [ scores, setScores ] = useState<{time: number, score: number}[]>([])
   const router = useRouter()
   const { id } = router.query
+  const [ interval, setTheInterval ] = useState<NodeJS.Timer | null>(null);
+
+  const startTimer = useCallback(() => {
+     setTheInterval(setInterval(() => {
+      setTime(Date.now())
+     }, 1000))
+  }, [])
+
+  const stopTimer = useCallback(() => {
+    if(interval != null) {
+      clearInterval(interval)
+      setScores(scores.concat({score: cardsRight.length, time: time != null ? Date.now() - time : 0}))
+      setTime(null)
+    }
+  }, [interval])
 
   useEffect(() => {
     const getAndSetFlashCardData = async () => {
@@ -57,6 +74,7 @@ function GameModePage() {
       <button className="px-4 py-2 border-white text-white text-xl m-2 cursor-pointer rounded-md" onClick={() => {
         setNextCard(0)
         setGameState(GameState.STARTED)
+        startTimer()
       }}>Click to Begin</button>
     </div>)
     break;
@@ -72,6 +90,7 @@ function GameModePage() {
             } else {
               setNextCard(null)
               setGameState(GameState.REVIEW)
+              stopTimer()
             }
           }} className="px-4 border-sky-100 border-2 m-2 py-2 text-2xl rounded-md cursor-pointer text-green-400">Right</button>
           <button onClick={() => {
@@ -81,6 +100,7 @@ function GameModePage() {
             } else {
               setNextCard(null)
               setGameState(GameState.REVIEW)
+              stopTimer()
             }
           }} className="px-4 border-sky-100 border-2 m-2 py-2 text-2xl rounded-md cursor-pointer text-red-500">Wrong</button>
         </div>
@@ -139,9 +159,30 @@ function GameModePage() {
                 <div className="mb-3">Wrong</div>
                 <div className="text-red-400">{cardsWrong.length}</div>
               </div>
+              <div className="flex flex-col items-center p-3 text-white">
+                <div className="mb-3">Time</div>
+                <div className="text-white-400">{time != null && Math.fround(time / 1000)}</div>
+              </div>
+
             </div>
-            <div className="flex flex-col items-center justify-center">
-              {cards && content}
+            <div className='flex sm:flex-row flex-col-reverse'>
+              <div className='pr-10 max-w-[200px]'>
+                <h1 className='text-lg text-white border-b border-white text-center'>Leader Board</h1>
+                <div className='flex sm:flex-col flex-row'>
+
+                {
+                  scores.map(s => (
+                    <div key={s.time} className='flex items-center p-3'>
+                       <div className={`${s.score === cards.length ? 'text-green-100': 'text-yellow-100'} text-sm`}>{s.score} / {cards.length}</div>
+                       <div className='font-bold pl-3'>{Math.fround(s.time / 1000)} seconds</div>
+                    </div>
+                  ))
+                }
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                {cards && content}
+              </div>
             </div>
             
           </main>
