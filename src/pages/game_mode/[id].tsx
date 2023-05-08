@@ -25,7 +25,7 @@ function GameModePage() {
   const [ nextCard, setNextCard ] = useState<number | null>(null)
   const [ displayConfig, setDisplayConfig] = useState({front: "spanish", back: "english"})
   const [ gameState, setGameState ] = useState(GameState.INIT)
-  const [ time, setTime] = useState<number | null>(null)
+  const [ time, setTime] = useState<number>(0)
   const [ scores, setScores ] = useState<{time: number, score: number}[]>([])
   const router = useRouter()
   const { id } = router.query
@@ -33,15 +33,17 @@ function GameModePage() {
 
   const startTimer = useCallback(() => {
      setTheInterval(setInterval(() => {
-      setTime(Date.now())
+      setTime(time => time + 1)
      }, 1000))
   }, [])
 
   const stopTimer = useCallback(() => {
     if(interval != null) {
       clearInterval(interval)
-      setScores(scores.concat({score: cardsRight.length, time: time != null ? Date.now() - time : 0}))
-      setTime(null)
+      setTheInterval(null)
+      setScores(scores => scores.concat({score: cardsRight.length, time: time}))
+      setTime(0)
+      
     }
   }, [interval])
 
@@ -108,7 +110,7 @@ function GameModePage() {
       break;
     case GameState.REVIEW:
       if(cardsWrong.length === 0) {
-        content = (<div>
+        content = (<div className='text-white'>
           <p>Nada para revisar! Que bueno! </p>
         </div>)
       } else {
@@ -161,7 +163,7 @@ function GameModePage() {
               </div>
               <div className="flex flex-col items-center p-3 text-white">
                 <div className="mb-3">Time</div>
-                <div className="text-white-400">{time != null && Math.fround(time / 1000)}</div>
+                <div className="text-white-400">{time} seconds</div>
               </div>
 
             </div>
@@ -174,7 +176,7 @@ function GameModePage() {
                   scores.map(s => (
                     <div key={s.time} className='flex items-center p-3'>
                        <div className={`${s.score === cards.length ? 'text-green-100': 'text-yellow-100'} text-sm`}>{s.score} / {cards.length}</div>
-                       <div className='font-bold pl-3'>{Math.fround(s.time / 1000)} seconds</div>
+                       <div className='font-bold pl-3 text-white'>{s.time} seconds</div>
                     </div>
                   ))
                 }
