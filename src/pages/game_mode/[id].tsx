@@ -117,6 +117,12 @@ function GameModePage() {
         content = (
           <div className="flex flex-col">
             <div className='text-white text-center'>Tenias {cardsWrong.length} tarjetas incorectas. Ver abajo para revisarlos</div>
+            <button onClick={() => {
+              setCardsRight([])
+              setCardsWrong([])
+              setGameState(GameState.STARTED)
+              startTimer()
+            }} className="text-lg text-center mx-1 sm:text-2xl text-green-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4">Reintentar</button>
             <FlashcardGrid cards={cardsWrong}/>
 
           </div>
@@ -176,7 +182,7 @@ function GameModePage() {
                   scores.map(s => (
                     <div key={s.time} className='flex items-center p-3'>
                        <div className={`${s.score === cards.length ? 'text-green-100': 'text-yellow-100'} text-sm`}>{s.score} / {cards.length}</div>
-                       <div className='font-bold pl-3 text-white'>{s.time} seconds</div>
+                       <div className='font-bold pl-3 text-white'>{s.time}s</div>
                     </div>
                   ))
                 }
