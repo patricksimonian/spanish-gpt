@@ -25,3 +25,179 @@ spec:
     spanish: guapo/a
   - english: appropriate
     spanish: adecuado
+  - spanish: Mal genio
+    english: Bad temper
+
+  - spanish: Buen genio
+    english: Good temper
+
+  - spanish: Atinado
+    english: Accurate
+
+  - spanish: Desatinado
+    english: Inaccurate
+
+  - spanish: Ordenado
+    english: Organized
+
+  - spanish: Desordenado
+    english: Disorganized
+
+  - spanish: Eficiente
+    english: Efficient
+
+  - spanish: Ineficiente
+    english: Inefficient
+
+  - spanish: Olvidadizo
+    english: Forgetful
+
+  - spanish: Atento
+    english: Attentive
+
+  - spanish: Generoso
+    english: Generous
+
+  - spanish: Tacaño
+    english: Stingy
+
+  - spanish: Trabajador
+    english: Hardworking
+
+  - spanish: Flojo
+    english: Lazy
+
+  - spanish: Paciente
+    english: Patient
+
+  - spanish: Impaciente
+    english: Impatient
+
+  - spanish: Equilibrado
+    english: Balanced
+
+  - spanish: Desequilibrado
+    english: Unbalanced
+
+  - spanish: Cambiante
+    english: Changeable
+
+  - spanish: Constante
+    english: Constant
+
+  - spanish: Sumiso
+    english: Submissive
+
+  - spanish: Dominante
+    english: Dominant
+
+  - spanish: Voluble
+    english: Fickle
+
+  - spanish: Firme
+    english: Firm
+
+  - spanish: Puntual
+    english: Punctual
+
+  - spanish: Impuntual
+    english: Impunctual
+
+  - spanish: Exigente
+    english: Demanding
+
+  - spanish: Indulgente
+    english: Indulgent
+
+  - spanish: Testarudo
+    english: Stubborn
+
+  - spanish: Transigente
+    english: Tolerant
+
+  - spanish: Egoísta
+    english: Selfish
+
+  - spanish: Solidario
+    english: Supportive
+
+  - spanish: Sensato
+    english: Sensible
+
+  - spanish: Insensato
+    english: Foolish
+
+  - spanish: Sabio
+    english: Wise
+
+  - spanish: Ignorante
+    english: Ignorant
+
+  - spanish: Inteligente
+    english: Intelligent
+
+  - spanish: Estúpido
+    english: Stupid
+
+  - spanish: Luchador
+    english: Fighter
+
+  - spanish: Pusilánime
+    english: Cowardly
+
+  - spanish: Valiente
+    english: Brave
+
+  - spanish: Cobarde
+    english: Coward
+
+  - spanish: Conflictivo
+    english: Conflictive
+
+  - spanish: Pacífico
+    english: Peaceful
+
+  - spanish: Tolerante
+    english: Tolerant
+
+  - spanish: Intolerante
+    english: Intolerant
+
+  - spanish: Predecible
+    english: Predictable
+
+  - spanish: Impredecible
+    english: Unpredictable
+
+  - spanish: Serio
+    english: Serious
+
+  - spanish: Bromista
+    english: Joking
+
+  - spanish: Diplomático
+    english: Diplomatic
+
+  - spanish: Rudo
+    english: Rude
+
+  - spanish: Ubicado
+    english: Well-placed
+
+  - spanish: Desubicado
+    english: Misplaced
+
+  - spanish: Grave
+    english: Serious
+
+  - spanish: Frívolo
+    english: Frivolous
+
+  - spanish: Estricto
+    english: Strict
+
+  - spanish: Permisivo
+    english: Permissive
+
+  - spanish: Creativo
+    english: creative
