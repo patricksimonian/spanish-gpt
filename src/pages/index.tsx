@@ -12,6 +12,7 @@ export type LanguageRes = Array<{
   name: string,
   file: string,
   numCards: number,
+  type: string
 }>
 function Home({ langauges }: { langauges: LanguageRes; }) {
 
@@ -32,7 +33,7 @@ function Home({ langauges }: { langauges: LanguageRes; }) {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-4 md:gap-8">
           {
-            langauges.map(l => (
+            langauges.filter(l => l.type === "vocabulary").map(l => (
               <Link
                 className="flex relative max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
                 href={`/flashcards/${l.id}`}

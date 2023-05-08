@@ -34,7 +34,8 @@ export default function handler(_req: unknown, res: { status: (arg0: number) => 
             file,
             name: yamlData.name,
             id: yamlData.id,
-            numCards: yamlData.spec.data.length
+            numCards: yamlData.spec.data.length,
+            type: yamlData.type
         }
     })
 
