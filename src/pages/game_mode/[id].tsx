@@ -37,7 +37,7 @@ function GameModePage() {
      }, 1000))
   }, [])
 
-  const stopTimer = useCallback(() => {
+  const stopTimer = () => {
     if(interval != null) {
       clearInterval(interval)
       setTheInterval(null)
@@ -45,7 +45,7 @@ function GameModePage() {
       setTime(0)
       
     }
-  }, [interval])
+  }
 
   useEffect(() => {
     const getAndSetFlashCardData = async () => {
