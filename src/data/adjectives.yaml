@@ -145,13 +145,13 @@ spec:
     english: Fighter
 
   - spanish: Pusilánime
-    english: Cowardly
+    english: Faint-hearted, cowardly
 
   - spanish: Valiente
     english: Brave
 
   - spanish: Cobarde
-    english: Coward
+    english: Cowardly, Timid
 
   - spanish: Conflictivo
     english: Conflictive
