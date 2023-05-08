@@ -112,6 +112,12 @@ function GameModePage() {
       if(cardsWrong.length === 0) {
         content = (<div className='text-white'>
           <p>Nada para revisar! Que bueno! </p>
+          <button onClick={() => {
+              setCardsRight([])
+              setCardsWrong([])
+              setGameState(GameState.STARTED)
+              startTimer()
+            }} className="text-lg text-center mx-1 sm:text-2xl text-green-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4">Reintentar</button>
         </div>)
       } else {
         content = (
