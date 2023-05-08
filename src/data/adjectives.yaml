@@ -7,8 +7,10 @@ spec:
     spanish: vieja/o
   - english: young
     spanish: joven
-  - english: short
+  - english: short in stature
     spanish: bajo/a
+  - english: short in length
+    spanish: corto/a
   - english: tall
     spanish: alto/a
   - english: thin
@@ -32,10 +34,10 @@ spec:
     english: Good temper
 
   - spanish: Atinado
-    english: Accurate
+    english: Accurate, certain, has common sense
 
   - spanish: Desatinado
-    english: Inaccurate
+    english: Inaccurate, lacks common sense, foolish, lacks moderation
 
   - spanish: Ordenado
     english: Organized
@@ -74,16 +76,16 @@ spec:
     english: Impatient
 
   - spanish: Equilibrado
-    english: Balanced
+    english: Balanced/Stable in personality
 
   - spanish: Desequilibrado
-    english: Unbalanced
+    english: Unbalanced/Unstable in personality
 
   - spanish: Cambiante
     english: Changeable
 
   - spanish: Constante
-    english: Constant
+    english: Constant, unwavering
 
   - spanish: Sumiso
     english: Submissive
@@ -125,7 +127,7 @@ spec:
     english: Sensible
 
   - spanish: Insensato
-    english: Foolish
+    english: Foolish, Senseless
 
   - spanish: Sabio
     english: Wise
@@ -170,10 +172,10 @@ spec:
     english: Unpredictable
 
   - spanish: Serio
-    english: Serious
+    english: Serious in personality
 
   - spanish: Bromista
-    english: Joking
+    english: Joker/Goof
 
   - spanish: Diplomático
     english: Diplomatic
@@ -182,13 +184,13 @@ spec:
     english: Rude
 
   - spanish: Ubicado
-    english: Well-placed
+    english: Well-placed/situated
 
   - spanish: Desubicado
-    english: Misplaced
+    english: Misplaced, tactless, disorientated
 
   - spanish: Grave
-    english: Serious
+    english: Serious in situation (grave)
 
   - spanish: Frívolo
     english: Frivolous
