@@ -1,0 +1,178 @@
+id: 12322-338b-4987-43aa-7c85afa785eb
+name: La Familia
+type: vocabulary
+spec: 
+  data:
+  - spanish: Padre
+    english: Father
+
+  - spanish: Madre
+    english: Mother
+
+  - spanish: Hijo
+    english: Son
+
+  - spanish: Hija
+    english: Daughter
+
+  - spanish: Hermano
+    english: Brother
+
+  - spanish: Hermana
+    english: Sister
+
+  - spanish: Abuelo
+    english: Grandfather
+
+  - spanish: Abuela
+    english: Grandmother
+
+  - spanish: Nieto
+    english: Grandson
+
+  - spanish: Nieta
+    english: Granddaughter
+
+  - spanish: Tío
+    english: Uncle
+
+  - spanish: Tía
+    english: Aunt
+
+  - spanish: Primo
+    english: Cousin (male)
+
+  - spanish: Prima
+    english: Cousin (female)
+
+  - spanish: Sobrino
+    english: Nephew
+
+  - spanish: Sobrina
+    english: Niece
+
+  - spanish: Cuñado
+    english: Brother-in-law
+
+  - spanish: Cuñada
+    english: Sister-in-law
+
+  - spanish: Suegro
+    english: Father-in-law
+
+  - spanish: Suegra
+    english: Mother-in-law
+
+  - spanish: Yerno
+    english: Son-in-law
+
+  - spanish: Nuera
+    english: Daughter-in-law
+
+  - spanish: Esposo
+    english: Husband
+
+  - spanish: Esposa
+    english: Wife
+
+  - spanish: Padrastro
+    english: Stepfather
+
+  - spanish: Madrastra
+    english: Stepmother
+
+  - spanish: Hermanastro
+    english: Stepbrother
+
+  - spanish: Hermanastra
+    english: Stepsister
+
+  - spanish: Medio hermano
+    english: Half-brother
+
+  - spanish: Medio hermana
+    english: Half-sister
+
+  - spanish: Suegro
+    english: Father-in-law
+
+  - spanish: Suegra
+    english: Mother-in-law
+
+  - spanish: Cuñado
+    english: Brother-in-law
+
+  - spanish: Cuñada
+    english: Sister-in-law
+
+  - spanish: Nuera
+    english: Daughter-in-law
+
+  - spanish: Yerno
+    english: Son-in-law
+
+  - spanish: Abuelito
+    english: Grandpa
+
+  - spanish: Abuelita
+    english: Grandma
+
+  - spanish: Papá
+    english: Dad
+
+  - spanish: Mamá
+    english: Mom
+
+  - spanish: Padrino
+    english: Godfather
+
+  - spanish: Madrina
+    english: Godmother
+
+  - spanish: Ahijado
+    english: Godson
+
+  - spanish: Ahijada
+    english: Goddaughter
+
+  - spanish: Familia
+    english: Family
+
+  - spanish: Parientes
+    english: Relatives
+
+  - spanish: Padres
+    english: Parents
+
+  - spanish: Hijos
+    english: Children
+
+  - spanish: Hermanos
+    english: Siblings
+
+  - spanish: Nietos
+    english: Grandchildren
+
+  - spanish: Tíos
+    english: Uncles/Aunts
+
+  - spanish: Primos
+    english: Cousins
+
+  - spanish: Sobrinos
+    english: Nephews/Nieces
+
+  - spanish: Cuñados
+    english: Brothers-in-law/Sisters-in-law
+
+  - spanish: Suegros
+    english: Parents-in-law
+
+  - spanish: Esposos
+    english: Spouses
+
+  - spanish: Padrastros
+    english: Stepparents
+
+  - spanish: Hermanastros
+    english: Stepbrothers/
