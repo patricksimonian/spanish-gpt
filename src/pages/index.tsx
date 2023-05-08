@@ -65,7 +65,8 @@ export function getServerSideProps() {
             file,
             name: yamlData.name,
             id: yamlData.id,
-            numCards: yamlData.spec.data.length
+            numCards: yamlData.spec.data.length,
+            type: yamlData.type
         }
     })
   return { props: { langauges: data } };
