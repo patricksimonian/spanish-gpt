@@ -1,20 +1,23 @@
 import { readFileSync, readdirSync } from "fs"
 import path from "path"
-import { languageFile } from "."
+import type { languageFile } from "."
 import yaml from 'yaml'
 
 
 export type LangaugeResponse = {
     data: languageFile
 }
-export default function handler(req, res) {
+export default function handler(req: { query: { id: string | number } }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { data?: any; message?: string }): void; new(): any } } }) {
     const files = readdirSync( path.join(process.cwd(), 'src', 'data'))
     
-    const filesMap = files.reduce((acc, file) => {
+    const filesMap: {
+        [key: string]: languageFile
+    } = files.reduce((acc: {[key: string]: languageFile}, file: string) => {
         const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
-        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString())
-        
-      acc[yamlData.id] = yamlData
+        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
+        if(yamlData.type === 'vocabulary') {
+            acc[yamlData.id] = yamlData
+        }
       return acc;
     }, {})
 

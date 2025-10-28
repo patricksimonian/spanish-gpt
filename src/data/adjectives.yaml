@@ -7,8 +7,10 @@ spec:
     spanish: vieja/o
   - english: young
     spanish: joven
-  - english: short
+  - english: short in stature
     spanish: bajo/a
+  - english: short in length
+    spanish: corto/a
   - english: tall
     spanish: alto/a
   - english: thin
@@ -23,3 +25,181 @@ spec:
     spanish: lindo/a
   - english: good looking
     spanish: guapo/a
+  - english: appropriate
+    spanish: adecuado
+  - spanish: Mal genio
+    english: Bad temper
+
+  - spanish: Buen genio
+    english: Good temper
+
+  - spanish: Atinado
+    english: Accurate, certain, has common sense
+
+  - spanish: Desatinado
+    english: Inaccurate, lacks common sense, foolish, lacks moderation
+
+  - spanish: Ordenado
+    english: Organized
+
+  - spanish: Desordenado
+    english: Disorganized
+
+  - spanish: Eficiente
+    english: Efficient
+
+  - spanish: Ineficiente
+    english: Inefficient
+
+  - spanish: Olvidadizo
+    english: Forgetful
+
+  - spanish: Atento
+    english: Attentive
+
+  - spanish: Generoso
+    english: Generous
+
+  - spanish: Tacaño
+    english: Stingy
+
+  - spanish: Trabajador
+    english: Hardworking
+
+  - spanish: Flojo
+    english: Lazy
+
+  - spanish: Paciente
+    english: Patient
+
+  - spanish: Impaciente
+    english: Impatient
+
+  - spanish: Equilibrado
+    english: Balanced/Stable in personality
+
+  - spanish: Desequilibrado
+    english: Unbalanced/Unstable in personality
+
+  - spanish: Cambiante
+    english: Moody
+
+  - spanish: Constante
+    english: Constant, unwavering
+
+  - spanish: Sumiso
+    english: Submissive
+
+  - spanish: Dominante
+    english: Dominant
+
+  - spanish: Voluble
+    english: Fickle
+
+  - spanish: Firme
+    english: Firm
+
+  - spanish: Puntual
+    english: Punctual
+
+  - spanish: Impuntual
+    english: Impunctual
+
+  - spanish: Exigente
+    english: Demanding
+
+  - spanish: Indulgente
+    english: Indulgent
+
+  - spanish: Testarudo
+    english: Stubborn
+
+  - spanish: Transigente
+    english: Tolerant
+
+  - spanish: Egoísta
+    english: Selfish
+
+  - spanish: Solidario
+    english: Supportive
+
+  - spanish: Sensato
+    english: Sensible
+
+  - spanish: Insensato
+    english: Foolish, Senseless
+
+  - spanish: Sabio
+    english: Wise
+
+  - spanish: Ignorante
+    english: Ignorant
+
+  - spanish: Inteligente
+    english: Intelligent
+
+  - spanish: Estúpido
+    english: Stupid
+
+  - spanish: Luchador
+    english: Fighter
+
+  - spanish: Pusilánime
+    english: Faint-hearted, cowardly
+
+  - spanish: Valiente
+    english: Brave
+
+  - spanish: Cobarde
+    english: Cowardly, Timid
+
+  - spanish: Conflictivo
+    english: Conflictive
+
+  - spanish: Pacífico
+    english: Peaceful
+
+  - spanish: Tolerante
+    english: Tolerant
+
+  - spanish: Intolerante
+    english: Intolerant
+
+  - spanish: Predecible
+    english: Predictable
+
+  - spanish: Impredecible
+    english: Unpredictable
+
+  - spanish: Serio
+    english: Serious in personality
+
+  - spanish: Bromista
+    english: Joker/Goof
+
+  - spanish: Diplomático
+    english: Diplomatic
+
+  - spanish: Rudo
+    english: Rude
+
+  - spanish: Ubicado
+    english: Well-placed/situated
+
+  - spanish: Desubicado
+    english: Misplaced, tactless, disorientated
+
+  - spanish: Grave
+    english: Serious in situation (grave)
+
+  - spanish: Frívolo
+    english: Frivolous
+
+  - spanish: Estricto
+    english: Strict
+
+  - spanish: Permisivo
+    english: Permissive
+
+  - spanish: Creativo
+    english: creative

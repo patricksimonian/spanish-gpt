@@ -1,0 +1,214 @@
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import FlashcardGrid from "../../components/FlashcardGrid";
+import Link from "next/link";
+import { type languageFile } from "../api/languages";
+import { shuffle } from "~/utils/array";
+import Flashcard from "~/components/Flashcard";
+
+enum GameState {
+  INIT = "INIT",
+  STARTED = "STARTED",
+  REVIEW = "REVIEW"
+}
+
+interface vocab {
+  spanish: string
+  english: string
+}
+function GameModePage() {
+  const [flashcardData, setFlashcardData] = useState<languageFile>();
+  const [ fetched, setFetched] = useState(false)
+  const [ cardsRight, setCardsRight ] = useState<Array<vocab>>([]);
+  const [ cardsWrong, setCardsWrong ] = useState<Array<vocab>>([]);
+  const [ nextCard, setNextCard ] = useState<number | null>(null)
+  const [ displayConfig, setDisplayConfig] = useState({front: "spanish", back: "english"})
+  const [ gameState, setGameState ] = useState(GameState.INIT)
+  const [ time, setTime] = useState<number>(0)
+  const [ scores, setScores ] = useState<{time: number, score: number}[]>([])
+  const router = useRouter()
+  const { id } = router.query
+  const [ interval, setTheInterval ] = useState<NodeJS.Timer | null>(null);
+
+  const startTimer = useCallback(() => {
+     setTheInterval(setInterval(() => {
+      setTime(time => time + 1)
+     }, 1000))
+  }, [])
+
+  const stopTimer = () => {
+    if(interval != null) {
+      clearInterval(interval)
+      setTheInterval(null)
+      setScores(scores => scores.concat({score: cardsRight.length, time: time}))
+      setTime(0)
+      
+    }
+  }
+
+  useEffect(() => {
+    const getAndSetFlashCardData = async () => {
+        const res = await fetch(`/api/languages/${id as string}`)
+        if(res.status === 200) {
+            const d: {data: languageFile} =  await res.json() as {data:  languageFile}
+            setFlashcardData(d.data)
+        }
+    }
+    
+    if(!fetched && !flashcardData) {
+        getAndSetFlashCardData().catch(() => null)
+        setFetched(true)
+    }
+  }, [fetched, flashcardData, id])
+
+  const cards: vocab[] = useMemo(() => {
+    if(flashcardData !== undefined) {
+      return shuffle(flashcardData.spec.data) as vocab[]
+    }
+    return []
+  }, [ flashcardData]) 
+  
+  let content = null;
+  switch(gameState) {
+    case GameState.INIT:
+      content = ( <div className="h-full flex items-center justify-center">
+      <button className="px-4 py-2 border-white text-white text-xl m-2 cursor-pointer rounded-md" onClick={() => {
+        setNextCard(0)
+        setGameState(GameState.STARTED)
+        startTimer()
+      }}>Click to Begin</button>
+    </div>)
+    break;
+    case GameState.STARTED:
+      const card = cards[nextCard as number] as vocab
+      content = (<>
+        <Flashcard front={card[displayConfig.front as "spanish" | "english"]} back={card[displayConfig.back as "spanish" | "english"]} />
+        <div className="flex items-center text-2xl justify-between mt-6">
+          <button onClick={() => {
+            setCardsRight(cardsRight.concat(card))
+            if(nextCard as number + 1 < cards.length) {
+              setNextCard(nextCard as number + 1)
+            } else {
+              setNextCard(null)
+              setGameState(GameState.REVIEW)
+              stopTimer()
+            }
+          }} className="px-4 border-sky-100 border-2 m-2 py-2 text-2xl rounded-md cursor-pointer text-green-400">Right</button>
+          <button onClick={() => {
+            setCardsWrong(cardsWrong.concat(card))
+            if(nextCard as number + 1 < cards.length) {
+              setNextCard(nextCard as number + 1)
+            } else {
+              setNextCard(null)
+              setGameState(GameState.REVIEW)
+              stopTimer()
+            }
+          }} className="px-4 border-sky-100 border-2 m-2 py-2 text-2xl rounded-md cursor-pointer text-red-500">Wrong</button>
+        </div>
+      </>)
+      break;
+    case GameState.REVIEW:
+      if(cardsWrong.length === 0) {
+        content = (<div className='text-white'>
+          <p>Nada para revisar! Que bueno! </p>
+          <button onClick={() => {
+              setCardsRight([])
+              setCardsWrong([])
+              setGameState(GameState.STARTED)
+              startTimer()
+            }} className="text-lg text-center mx-1 sm:text-2xl text-green-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4">Reintentar</button>
+        </div>)
+      } else {
+        content = (
+          <div className="flex flex-col">
+            <div className='text-white text-center'>Tenias {cardsWrong.length} tarjetas incorectas. Ver abajo para revisarlos</div>
+            <button onClick={() => {
+              setCardsRight([])
+              setCardsWrong([])
+              setGameState(GameState.STARTED)
+              startTimer()
+            }} className="text-lg text-center mx-1 sm:text-2xl text-green-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4">Reintentar</button>
+            <FlashcardGrid cards={cardsWrong}/>
+
+          </div>
+        )
+      }
+      break;
+  }
+  
+  if(flashcardData !== undefined) {
+      return (
+        <>
+          <Head>
+            <title>{flashcardData.name}</title>
+            <meta name="description" content="Generated by create-t3-app" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <main className="flex min-h-screen pt-5 flex-col items-center justify-center bg-gradient-to-b from-[#003333] to-[#15162c]">
+            <h1 className="text-5xl text-center text-white mb-10">{flashcardData.name}</h1>
+            <div className='flex justify-center sm:justify-start items-center px-3'>
+              <Link className="text-lg text-center mx-1 sm:text-2xl text-white rounded-lg cursor-pointer border-2 py-2 px-4" href="/">Back</Link>
+              <Link className="text-lg text-center mx-1 sm:text-2xl text-blue-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4" href={`/flashcards/${id as string}`}>Back to Studying</Link>
+              <button onClick={() => {
+                const config = {
+                  front: "spanish",
+                  back: "english"
+                }
+                if(displayConfig.front === "spanish") {
+                  config.front = "english";
+                  config.back = "spanish";
+                }
+
+                setDisplayConfig(config)
+              }} className="text-lg text-center mx-1 sm:text-2xl text-green-500 rounded-lg cursor-pointer py-2 px-1 sm:px-4">Toggle faces</button>
+              
+            </div>
+            <div className="flex justify-between items-center text-3xl p-4">
+              <div className="flex flex-col items-center p-3 text-white">
+                <div className="mb-3">Right</div>
+                <div className="text-green-400">{cardsRight.length}</div>
+              </div>
+              <div className="flex flex-col items-center p-3 text-white">
+                <div className="mb-3">Wrong</div>
+                <div className="text-red-400">{cardsWrong.length}</div>
+              </div>
+              <div className="flex flex-col items-center p-3 text-white">
+                <div className="mb-3">Time</div>
+                <div className="text-white-400">{time} seconds</div>
+              </div>
+
+            </div>
+            <div className='flex sm:flex-row flex-col-reverse'>
+              <div className='pr-10 max-w-[200px]'>
+                <h1 className='text-lg text-white border-b border-white text-center'>Leader Board</h1>
+                <div className='flex sm:flex-col flex-row'>
+
+                {
+                  scores.map(s => (
+                    <div key={s.time} className='flex items-center p-3'>
+                       <div className={`${s.score === cards.length ? 'text-green-100': 'text-yellow-100'} text-sm`}>{s.score} / {cards.length}</div>
+                       <div className='font-bold pl-3 text-white'>{s.time}s</div>
+                    </div>
+                  ))
+                }
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                {cards && content}
+              </div>
+            </div>
+            
+          </main>
+        </>
+      );
+  } else {
+    return (
+      <>
+        <div className="text-5xl text-white text-center">Loading</div>
+      </>
+    )
+  }
+}
+
+export default GameModePage;

@@ -5,8 +5,12 @@ spec:
   data:
   - english: to finish
     spanish: acabar
+  - english: to study in depth
+    spanish: profundizar
   - english: to darken
     spanish: oscurecer
+  - english: to shine/ to wear/ to look
+    spanish: lucir
   - english: to resolve
     spanish: resolver
   - english: to sheer
@@ -21,7 +25,7 @@ spec:
     spanish: sorprender
   - english: to lead
     spanish: conducir
-  - english: to complain/moan/whine
+  - english: to complain /moan /whine
     spanish: quejarse
   - english: to reserve
     spanish: reservar
@@ -31,7 +35,7 @@ spec:
     spanish: engañar
   - english: to land (like a plane)
     spanish: aterrizar
-  - english: to stay/to remain in place
+  - english: to stay/ to remain in place
     spanish: quedarse
   - english: to declare
     spanish: declarar
@@ -59,6 +63,8 @@ spec:
     english: to lie
   - spanish: pensar
     english: to think
+  - spanish: suavisarse
+    english: to soften/be less stern/to be mild
   - spanish: perder
     english: to lose
   - spanish: quebrar
@@ -87,6 +93,8 @@ spec:
     english: to usually do something/ to be accustomed to
   - spanish: soñar
     english: to dream
+  - spanish: charlar
+    english: to chat
   - spanish: volar
     english: to fly
   - spanish: volver

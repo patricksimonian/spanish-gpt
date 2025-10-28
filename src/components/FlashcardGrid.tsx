@@ -1,13 +1,13 @@
 import React from 'react';
 import Flashcard from './Flashcard';
-import {  vocabularyInterface } from '~/pages';
+import { vocabularyInterface } from '~/pages';
 
-function FlashcardGrid({ cards, handleCardCorrect, handleCardIncorrect }: { cards: Array<vocabularyInterface>,handleCardCorrect: Function, handleCardIncorrect: Function}) {
+function FlashcardGrid({ cards }: { cards: Array<{ spanish: string, english: string }> }) {
   return (
     <div className="flex flex-wrap justify-center">
       {cards.map((card, index) => (
         <div key={index} className="m-4">
-          <Flashcard english={card.english} spanish={card.spanish}  handleCardCorrect={handleCardCorrect} handleCardIncorrect={handleCardIncorrect} />
+          <Flashcard front={card.english} back={card.spanish} />
         </div>
       ))}
     </div>
