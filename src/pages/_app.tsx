@@ -4,6 +4,11 @@ import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
 
+declare namespace JSX {
+  interface Element { }
+  interface IntrinsicElements { div: any; }
+}
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
 };

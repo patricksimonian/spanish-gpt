@@ -3,6 +3,8 @@ name: Verbs in Infinitive
 type: vocabulary
 spec: 
   data:
+  - english: to finish
+    spanish: acabar
   - english: to darken
     spanish: oscurecer
   - english: to resolve

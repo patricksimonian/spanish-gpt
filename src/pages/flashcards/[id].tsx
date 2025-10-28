@@ -12,6 +12,8 @@ import Link from "next/link";
 function Flashcard() {
   const [flashcardData, setFlashcardData] = useState({ name: "", spec: { data: []}});
   const [ fetched, setFetched] = useState(false)
+  const [ cardCorrect, setCardsCorrect ] = useState([]);
+  const [ cardIncorrect, setCardsIncorrect ] = useState([]);
   const router = useRouter()
   const { id } = router.query
   useEffect(() => {
@@ -38,7 +40,7 @@ function Flashcard() {
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <h1 className="text-5xl center mb-10">{flashcardData.name}</h1>
         <Link className="text-5xl text-white" href="/">Back</Link>
-        <FlashcardGrid cards={flashcardData.spec.data} />
+        <FlashcardGrid cards={flashcardData.spec.data} handleCardCorrect={(id: string) => setCardsCorrect((cards: Array<string>) => cards.concat(id))} handleCardIncorrect={(id: string) => setCardsCorrect((cards: Array<string>) => cards.concat(id))}/>
       </main>
     </>
   );
