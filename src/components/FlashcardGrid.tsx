@@ -1,6 +1,6 @@
 import React from 'react';
 import Flashcard from './Flashcard';
-import { vocabularyInterface } from '~/pages';
+
 
 function FlashcardGrid({ cards }: { cards: Array<{ spanish: string, english: string }> }) {
   return (
