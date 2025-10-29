@@ -1,5 +1,4 @@
 import { readFileSync, readdirSync } from "fs";
-import { type NextPage } from "next";
 import yaml from 'yaml';
 import Head from "next/head";
 import Link from "next/link";
@@ -32,20 +31,20 @@ function Home({ langauges }: { langauges: LanguageRes; }) {
           <p className="text-2xl text-white mt-4">Select a language flash card pack</p>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-4 md:gap-8">
-          {
-            langauges.filter(l => l.type === "vocabulary").map(l => (
-              <Link
-                className="flex relative max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-                href={`/flashcards/${l.id}`}
-              
-                key={l.id + l.file}
-              >
-                <h3 className="text-2xl font-bold">{l.name}</h3>
-                <span className="absolute bottom-0 z-10 right-0 text-[10px] text-white pr-2 pb-0.5">{l.numCards}</span>
-              </Link>
+            {
+              langauges.filter(l => l.type === "vocabulary").map(l => (
+                <Link
+                  className="flex relative max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
+                  href={`/flashcards/${l.id}`}
 
-            ))
-          }
+                  key={l.id + l.file}
+                >
+                  <h3 className="text-2xl font-bold">{l.name}</h3>
+                  <span className="absolute bottom-0 z-10 right-0 text-[10px] text-white pr-2 pb-0.5">{l.numCards}</span>
+                </Link>
+
+              ))
+            }
           </div>
 
         </div>
@@ -55,20 +54,20 @@ function Home({ langauges }: { langauges: LanguageRes; }) {
 }
 
 export function getServerSideProps() {
-  const files = readdirSync( path.join(process.cwd(), 'src', 'data'))
+  const files = readdirSync(path.join(process.cwd(), 'src', 'data'))
 
-    const data = files.map(file => {
-        const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
-        const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
-        
-        return {
-            file,
-            name: yamlData.name,
-            id: yamlData.id,
-            numCards: yamlData.spec.data.length,
-            type: yamlData.type
-        }
-    })
+  const data = files.map(file => {
+    const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
+    const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
+
+    return {
+      file,
+      name: yamlData.name,
+      id: yamlData.id,
+      numCards: yamlData.spec.data.length,
+      type: yamlData.type
+    }
+  })
   return { props: { langauges: data } };
 }
 export default Home;

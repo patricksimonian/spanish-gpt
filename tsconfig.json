@@ -23,7 +23,8 @@
       "~/*": [
         "./src/*"
       ]
-    }
+    },
+    "moduleResolution": "node"
   },
   "include": [
     ".eslintrc.cjs",
@@ -31,9 +32,11 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs"
+    "**/*.mjs",
+    "global.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".env.example"
   ]
 }
