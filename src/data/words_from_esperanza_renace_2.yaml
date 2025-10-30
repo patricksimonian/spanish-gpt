@@ -1,0 +1,109 @@
+id: 5f9d6e0a-3b2c-4d5e-8f7a-fdfda  # Re-using ID for consistency, but in a real system, this would be new
+name: Words from Esperanza Renace 2
+type: vocabulary
+spec:
+  data:
+    - spanish: dátiles
+      english: dates (fruit)
+    - spanish: ardilla
+      english: squirrel
+    - spanish: correcamino
+      english: roadrunner
+    - spanish: una cola
+      english: a tail (or a line/queue, or glue)
+    - spanish: inmigración
+      english: immigration
+    - spanish: vagon
+      english: wagon (cart) / railcar (train car)
+    - spanish: impregnado
+      english: impregnated / soaked / saturated
+    - spanish: el rostro
+      english: the face (often implies a more formal or descriptive context than *cara*)
+    - spanish: el sudor
+      english: the sweat
+    - spanish: marchita
+      english: withered / wilted
+    - spanish: hundirse
+      english: to sink / to go under
+    - spanish: a medida
+      english: as / to the extent that (e.g., *a medida que...*)
+    - spanish: rogar
+      english: to beg / to plead
+    - spanish: el mostrador
+      english: the counter (shop/bar) / the display case
+    - spanish: el funcionario
+      english: the official / the civil servant
+    - spanish: arrestar
+      english: to arrest
+    - spanish: entregar
+      english: to deliver / to hand over
+    - spanish: adelantándose
+      english: getting ahead / moving ahead (from *adelantarse*)
+    - spanish: perjudicar
+      english: to harm / to prejudice / to be detrimental to
+    - spanish: erguirse
+      english: to stand up straight / to stand tall
+    - spanish: secarse
+      english: to dry up
+    - spanish: sencilla
+      english: simple / plain (feminine adjective)
+    - spanish: contratar
+      english: to hire / to contract (a service or agreement)
+    - spanish: erguida
+      english: upright / erect (feminine adjective)
+    - spanish: orgullosa
+      english: proud (feminine adjective)
+    - spanish: apresurarse
+      english: to hurry / to rush
+    - spanish: prueba
+      english: test / proof / trial
+    - spanish: separarse
+      english: to separate / to part ways
+    - spanish: agitando
+      english: shaking / waving
+    - spanish: el paquete
+      english: the package / the parcel
+    - spanish: reclinarse
+      english: to lean back / to recline
+    - spanish: alegrarse
+      english: to be happy / to rejoice
+    - spanish: campesina
+      english: peasant woman / farm worker (feminine noun/adjective)
+    - spanish: medias
+      english: stockings / socks (hosiery)
+    - spanish: trenza
+      english: braid (of hair)
+    - spanish: jalar
+      english: to pull
+    - spanish: asombro
+      english: astonishment / amazement
+    - spanish: apretar
+      english: to squeeze / to tighten
+    - spanish: orilla
+      english: edge / bank (river) / shore (sea)
+    - spanish: opuesta
+      english: opposite (feminine adjective)
+    - spanish: un huerto
+      english: an orchard / a vegetable garden
+    - spanish: reconfortante
+      english: comforting / reassuring
+    - spanish: apiñarse
+      english: to crowd together / to huddle
+    - spanish: alivio
+      english: relief
+    - spanish: el listón
+      english: the ribbon / the tape measure
+    - spanish: querubines
+      english: cherubs
+    - spanish: mechones
+      english: locks (of hair)
+    - spanish: diminutos
+      english: tiny / diminutive
+    - spanish: aretes
+      english: earrings
+    - spanish: regazo
+      english: lap (where one sits, on the thighs)
+    - spanish: deslizarse
+      english: to slide / to slip
+    - spanish: sudor
+      english: sweat
