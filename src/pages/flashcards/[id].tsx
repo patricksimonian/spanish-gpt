@@ -17,7 +17,7 @@ function Flashcard() {
   const [flashcardData, setFlashcardData] = useState<languageFile>();
   const [fetched, setFetched] = useState(false)
   const [orderType, setOrderType] = useState(OrderType.ORDERED)
-
+  const [viewSide, setViewSide] = useState<"spanish" | "english">("spanish")
   const router = useRouter()
   const { id } = router.query
   useEffect(() => {
@@ -76,6 +76,7 @@ function Flashcard() {
                   return <button onClick={() => setOrderType(ot as OrderType)} key={ot} className={`text-lg sm:text-2xl border-2  m-1 sm:mx-3 rounded-md sm:py-2 sm:px-4 px-2 py-1 ${ot === orderType ? 'text-yellow-500' : 'text-blue-300'}`}>{ot}</button>
                 })
               }
+              <button onClick={() => setViewSide(viewSide === "spanish" ? "english" : "spanish")} className={`text-lg sm:text-2xl border-2  m-1 sm:mx-3 rounded-md sm:py-2 sm:px-4 px-2 py-1 text-purple-500`}>Toggle Side</button>
             </div>
           </div>
           <FlashcardGrid cards={cards} />
