@@ -79,7 +79,7 @@ function Flashcard() {
               <button onClick={() => setViewSide(viewSide === "spanish" ? "english" : "spanish")} className={`text-lg sm:text-2xl border-2  m-1 sm:mx-3 rounded-md sm:py-2 sm:px-4 px-2 py-1 text-purple-500`}>Toggle Side</button>
             </div>
           </div>
-          <FlashcardGrid cards={cards} />
+          <FlashcardGrid viewSide={viewSide} cards={cards} />
         </main>
       </>
     );
