@@ -1,0 +1,134 @@
+id: c1-grammar-transform-001
+name: Imperfect Subjunctive and Conditional Practice
+type: tense-transformation
+spec:
+  data:
+    # --- Category 1: Conditional & Imperfect Subjunctive (Third Conditional: Past) ---
+    - target_tense: Tercera Condicional
+      prompt_es: No estudié. Por eso, no aprobé el examen.
+      prompt_en: I didn't study. That's why I didn't pass the exam.
+      answer: Si hubiera estudiado, habría aprobado el examen.
+
+    - target_tense: Tercera Condicional
+      prompt_es: No hubo más inversión. Por eso, el proyecto fracasó.
+      prompt_en: There wasn't more investment. That's why the project failed.
+      answer: Si hubiera habido más inversión, el proyecto no habría fracasado.
+
+    - target_tense: Tercera Condicional
+      prompt_es: El gobierno no tomó medidas. Por eso, el pánico se extendió (cundió).
+      prompt_en: The government didn't take action. That's why panic spread.
+      answer: Si el gobierno hubiera tomado medidas, el pánico no habría cundido.
+
+    - target_tense: Tercera Condicional
+      prompt_es: Yo no estaba al tanto del riesgo. Por eso, no lo evité.
+      prompt_en: I wasn't aware of the risk. That's why I didn't avoid it.
+      answer: Si yo hubiera estado al tanto del riesgo, lo habría evitado.
+
+    - target_tense: Tercera Condicional
+      prompt_es: No me diste tu opinión. Por eso, cometí un error.
+      prompt_en: You didn't give me your opinion. That's why I made a mistake.
+      answer: Si me hubieras dado tu opinión, yo no habría cometido un error.
+
+    # --- Category 2: Conditional & Imperfect Subjunctive (Second Conditional: Present/Future) ---
+    - target_tense: Segunda Condicional
+      prompt_es: Yo no soy tú. No puedo darte ese consejo.
+      prompt_en: I'm not you. I can't give you that advice.
+      answer: Si yo fuera tú, te daría ese consejo.
+
+    - target_tense: Segunda Condicional
+      prompt_es: No tengo dinero. No puedo viajar a Japón.
+      prompt_en: I don't have money. I can't travel to Japan.
+      answer: Si tuviera dinero, viajaría a Japón.
+
+    - target_tense: Segunda Condicional
+      prompt_es: Es difícil sopesar los riesgos. Por eso, es difícil tomar una decisión.
+      prompt_en: It's difficult to weigh the risks. That's why it's difficult to make a decision.
+      answer: Si sopesáramos mejor los riesgos, sería más fácil tomar una decisión.
+
+    - target_tense: Segunda Condicional
+      prompt_es: Él no tiene pelos en la lengua. Por eso, siempre dice la verdad.
+      prompt_en: He doesn't mince words. That's why he always tells the truth.
+      answer: Si él no tuviera pelos en la lengua, no diría siempre la verdad.
+
+    - target_tense: Segunda Condicional
+      prompt_es: El director no rescata la situación. La empresa no se salva.
+      prompt_en: The director doesn't save the situation. The company won't be saved.
+      answer: Si el director rescatara la situación, la empresa se salvaría.
+
+    # --- Category 3: Imperfect Subjunctive in Past Contexts (Wish/Emotion/Doubt) ---
+    - target_tense: Imperfecto Subjuntivo
+      prompt_es: Me sorprendió: usted lo hizo. (Refutó la teoría.)
+      prompt_en: It surprised me: you did it. (You refuted the theory.)
+      answer: Me sorprendió que usted refutara la teoría.
+
+    - target_tense: Imperfecto Subjuntivo
+      prompt_es: El jefe dudó: la propuesta fuera viable.
+      prompt_en: The boss doubted: the proposal was viable.
+      answer: El jefe dudó que la propuesta fuera viable.
+
+    - target_tense: Imperfecto Subjuntivo
+      prompt_es: Me hubiera gustado: tú viniste. (Pasado no cumplido)
+      prompt_en: I would have liked: you came. (Unfulfilled past)
+      answer: Me hubiera gustado que vinieras.
+
+    - target_tense: Imperfecto Subjuntivo
+      prompt_es: No me pareció bien: ellos no estaban comprometidos.
+      prompt_en: It didn't seem right to me: they were not committed.
+      answer: No me pareció bien que no estuvieran comprometidos.
+
+    - target_tense: Imperfecto Subjuntivo
+      prompt_es: Era menester: el equipo comprendió la índole del problema.
+      prompt_en: It was necessary: the team understood the nature of the problem.
+      answer: Era menester que el equipo comprendiera la índole del problema.
+
+    # --- Category 4: Conditional & Imperfect Subjunctive for Politeness ---
+    - target_tense: Cortesía
+      prompt_es: Quiero un vaso de agua. (C1 Politeness)
+      prompt_en: I want a glass of water.
+      answer: Quisiera un vaso de agua.
+
+    - target_tense: Cortesía
+      prompt_es: Necesito su informe pronto. (C1 Politeness)
+      prompt_en: I need your report soon.
+      answer: Necesitaría su informe pronto.
+
+    - target_tense: Cortesía
+      prompt_es: Puedes ayudarme con la presentación? (C1 Politeness)
+      prompt_en: Can you help me with the presentation?
+      answer: ¿Pudieras ayudarme con la presentación?
+
+    - target_tense: Cortesía
+      prompt_es: Quiero saber si me puedes ayudar. (C1 Politeness)
+      prompt_en: I want to know if you can help me.
+      answer: Querría saber si pudieras ayudarme.
+
+    - target_tense: Cortesía
+      prompt_es: Quiero que vengas mañana. (C1 Politeness)
+      prompt_en: I want you to come tomorrow.
+      answer: Quisiera que vinieras mañana.
+
+    # --- Category 5: Complex Structures with Imperfect Subjunctive ---
+    - target_tense: Concesiva
+      prompt_es: Aunque lo dijeras abiertamente, no te creerían.
+      prompt_en: Even if you said it openly, they wouldn't believe you.
+      answer: Aunque lo dijeras sin tapujos, no te creerían.
+
+    - target_tense: Concesiva
+      prompt_es: La reunión ocurrió sin que yo estuviera informado.
+      prompt_en: The meeting happened without me being informed.
+      answer: La reunión ocurrió sin que yo estuviera al tanto.
+
+    - target_tense: Finalidad
+      prompt_es: Lo haré con la condición de que lo termines hoy.
+      prompt_en: I'll do it on the condition that you finish it today.
+      answer: Lo haré con tal de que lo termines hoy.
+
+    - target_tense: Deseo
+      prompt_es: Ojalá él traiga el postre. (Pasado/Imposible)
+      prompt_en: I wish he would bring the dessert. (Focus on past/impossible wish)
+      answer: Ojalá él trajera el postre.
+
+    - target_tense: Elusión
+      prompt_es: Es una situación muy complicada que tú evitas.
+      prompt_en: It's a very complicated situation that you avoid.
+      answer: Es una tesitura muy complicada que tú soslayas.

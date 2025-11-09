@@ -1,0 +1,159 @@
+id: c1-spanish-idioms-vocab-002
+name: C1 Discourse, Connectors, and Advanced Vocabulary
+type: vocabulary
+spec:
+  data:
+    # --- Category 1: Connectors and Concessive Structures (Crucial for C1 Rhetoric) ---
+    - spanish: A pesar de (que)
+      english: Despite (the fact that), in spite of
+
+    - spanish: No obstante
+      english: Nevertheless, however, notwithstanding
+
+    - spanish: Por consiguiente
+      english: Consequently, therefore, as a result
+
+    - spanish: Aun así
+      english: Even so, even still
+
+    - spanish: De ahí que (+ subjuntivo)
+      english: Hence, that's why, which is why
+
+    - spanish: Si bien
+      english: Although, even though
+
+    - spanish: En la medida en que
+      english: To the extent that, insofar as
+
+    - spanish: Por ende
+      english: Hence, therefore, for that reason (formal/academic)
+
+    - spanish: A menos que (+ subjuntivo)
+      english: Unless
+
+    - spanish: Es decir
+      english: That is to say, in other words
+
+    # --- Category 2: Complex Verbs and Advanced Actions ---
+    - spanish: Estipular
+      english: To stipulate, to specify (in a contract/agreement)
+
+    - spanish: Dirigirse a
+      english: To address (a topic or person), to head toward
+
+    - spanish: Prescindir de
+      english: To do without, to dispense with, to forgo
+
+    - spanish: Sucumbir
+      english: To succumb, to yield, to give in
+
+    - spanish: Resaltar
+      english: To highlight, to stand out, to emphasize
+
+    - spanish: Consolidar
+      english: To consolidate, to strengthen, to secure
+
+    - spanish: Promulgar
+      english: To enact, to promulgate, to proclaim (a law/decree)
+
+    - spanish: Ostentar
+      english: To hold (a position/title), to show off (in a negative sense)
+
+    - spanish: Llevar la batuta
+      english: To call the shots, to be in charge (literally: to carry the baton)
+
+    - spanish: Padecer de
+      english: To suffer from (an illness/a condition)
+
+    # --- Category 3: High-Frequency Nouns and Adjectives ---
+    - spanish: El ámbito
+      english: The scope, the field, the domain (e.g., ámbito profesional)
+
+    - spanish: El hincapié
+      english: The emphasis (e.g., hacer hincapié en)
+
+    - spanish: La pauta
+      english: The guideline, the pattern, the norm
+
+    - spanish: La idiosincrasia
+      english: The distinctive characteristic, the peculiarity, the idiosyncrasy
+
+    - spanish: Contundente
+      english: Conclusive, forceful, overwhelming (e.g., una prueba contundente)
+
+    - spanish: Rotundo/a
+      english: Resounding, absolute, emphatic (e.g., un éxito rotundo)
+
+    - spanish: Sobresaliente
+      english: Outstanding, exceptional, prominent
+
+    - spanish: Erróneo/a
+      english: Erroneous, mistaken, incorrect
+
+    - spanish: La repercusión
+      english: The repercussion, the consequence, the effect
+
+    - spanish: El porvenir
+      english: The future, the prospect
+
+    # --- Category 4: Essential Idioms and Phrasal Expressions ---
+    - spanish: Caer en saco roto
+      english: To fall on deaf ears, to be fruitless/a wasted effort
+
+    - spanish: Andarse por las ramas
+      english: To beat around the bush (literally: to walk around the branches)
+
+    - spanish: Poner pegas
+      english: To raise objections, to find fault, to put up barriers
+
+    - spanish: Salirse con la suya
+      english: To get one's way, to have the last word
+
+    - spanish: Dejar a alguien en ascuas
+      english: To leave someone in suspense, to keep someone hanging
+
+    - spanish: Venir al caso
+      english: To be relevant, to be to the point (e.g., No viene al caso)
+
+    - spanish: Echar balones fuera
+      english: To dodge the issue, to evade responsibility
+
+    - spanish: De cabo a rabo
+      english: From beginning to end, thoroughly
+
+    - spanish: Ser pan comido
+      english: To be a piece of cake (very easy)
+
+    - spanish: Meter la pata
+      english: To put one's foot in one's mouth, to mess up
+
+    # --- Category 5: Discourse Markers and Qualifiers ---
+    - spanish: Cabe destacar que
+      english: It should be noted that, it is worth highlighting that
+
+    - spanish: Por regla general
+      english: As a general rule, generally speaking
+
+    - spanish: En última instancia
+      english: Ultimately, in the final analysis
+
+    - spanish: De buenas a primeras
+      english: Suddenly, all of a sudden, out of the blue
+
+    - spanish: Dicho de otro modo
+      english: Put another way, in other words
+
+    - spanish: Al fin y al cabo
+      english: After all, in the end
+
+    - spanish: Más bien
+      english: Rather, instead, more accurately
+
+    - spanish: De forma inequívoca
+      english: Unequivocally, without a doubt
+
+    - spanish: Es de suma importancia
+      english: It is of utmost importance
+
+    - spanish: En aras de
+      english: For the sake of, in the interest of
