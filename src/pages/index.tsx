@@ -4,6 +4,8 @@ import Head from "next/head";
 import Link from "next/link";
 import path from "path";
 import { type languageFile } from "./api/languages";
+import { logger } from "~/utils/logger";
+import { adjustFontSizeByTextLength } from "~/utils/font";
 
 
 export type LanguageRes = Array<{
@@ -39,7 +41,7 @@ function Home({ langauges }: { langauges: LanguageRes; }) {
 
                   key={l.id + l.file}
                 >
-                  <h3 className="text-2xl font-bold">{l.name}</h3>
+                  <h3 className={`font-bold`} style={{ fontSize: adjustFontSizeByTextLength(l.name, 30, 24, 12) }}>{l.name}</h3>
                   <span className="absolute bottom-0 z-10 right-0 text-[10px] text-white pr-2 pb-0.5">{l.numCards}</span>
                 </Link>
 
@@ -58,16 +60,23 @@ export function getServerSideProps() {
 
   const data = files.map(file => {
     const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
-    const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
+    try {
 
-    return {
-      file,
-      name: yamlData.name,
-      id: yamlData.id,
-      numCards: yamlData.spec.data.length,
-      type: yamlData.type
+      const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
+
+      return {
+        file,
+        name: yamlData.name,
+        id: yamlData.id,
+        numCards: yamlData.spec.data.length,
+        type: yamlData.type
+      }
+    } catch (e) {
+      logger.error(`failed reading ${file}`)
+      logger.error(e)
+      return null
     }
-  })
+  }).filter(a => a !== null)
   return { props: { langauges: data } };
 }
 export default Home;

@@ -3,7 +3,6 @@ name: C1 Discourse, Connectors, and Advanced Vocabulary
 type: vocabulary
 spec:
   data:
-    # --- Category 1: Connectors and Concessive Structures (Crucial for C1 Rhetoric) ---
     - spanish: A pesar de (que)
       english: Despite (the fact that), in spite of
 
@@ -34,7 +33,6 @@ spec:
     - spanish: Es decir
       english: That is to say, in other words
 
-    # --- Category 2: Complex Verbs and Advanced Actions ---
     - spanish: Estipular
       english: To stipulate, to specify (in a contract/agreement)
 
@@ -60,12 +58,11 @@ spec:
       english: To hold (a position/title), to show off (in a negative sense)
 
     - spanish: Llevar la batuta
-      english: To call the shots, to be in charge (literally: to carry the baton)
+      english: "To call the shots, to be in charge (literally: to carry the baton)"
 
     - spanish: Padecer de
       english: To suffer from (an illness/a condition)
 
-    # --- Category 3: High-Frequency Nouns and Adjectives ---
     - spanish: El ámbito
       english: The scope, the field, the domain (e.g., ámbito profesional)
 
@@ -96,12 +93,11 @@ spec:
     - spanish: El porvenir
       english: The future, the prospect
 
-    # --- Category 4: Essential Idioms and Phrasal Expressions ---
     - spanish: Caer en saco roto
       english: To fall on deaf ears, to be fruitless/a wasted effort
 
     - spanish: Andarse por las ramas
-      english: To beat around the bush (literally: to walk around the branches)
+      english: "To beat around the bush (literally: to walk around the branches)"
 
     - spanish: Poner pegas
       english: To raise objections, to find fault, to put up barriers
@@ -127,7 +123,6 @@ spec:
     - spanish: Meter la pata
       english: To put one's foot in one's mouth, to mess up
 
-    # --- Category 5: Discourse Markers and Qualifiers ---
     - spanish: Cabe destacar que
       english: It should be noted that, it is worth highlighting that
 
