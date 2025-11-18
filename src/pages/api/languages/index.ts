@@ -6,6 +6,7 @@ export type vocabularyInterface = {
     data: Array<{
         english: string;
         spanish: string;
+        context?: string;
     }>
 }
 

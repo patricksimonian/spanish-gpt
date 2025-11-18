@@ -1,12 +1,10 @@
 import { readFileSync, readdirSync } from "fs";
 import yaml from 'yaml';
 import Head from "next/head";
-import Link from "next/link";
 import path from "path";
 import { type languageFile } from "./api/languages";
 import { logger } from "~/utils/logger";
-import { adjustFontSizeByTextLength } from "~/utils/font";
-
+import Pack from "~/components/Pack";
 
 export type LanguageRes = Array<{
   id: string,
@@ -35,15 +33,7 @@ function Home({ langauges }: { langauges: LanguageRes; }) {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-4 md:gap-8">
             {
               langauges.filter(l => l.type === "vocabulary").map(l => (
-                <Link
-                  className="flex relative max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-                  href={`/flashcards/${l.id}`}
-
-                  key={l.id + l.file}
-                >
-                  <h3 className={`font-bold`} style={{ fontSize: adjustFontSizeByTextLength(l.name, 30, 24, 12) }}>{l.name}</h3>
-                  <span className="absolute bottom-0 z-10 right-0 text-[10px] text-white pr-2 pb-0.5">{l.numCards}</span>
-                </Link>
+                <Pack key={l.id} name={l.name} id={l.id} numCards={l.numCards} />
 
               ))
             }

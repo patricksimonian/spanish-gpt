@@ -5,8 +5,10 @@ spec:
   data:
   - english: seminar
     spanish: el semenario
+    context: "I attended a seminar on ancient history."
   - english: conference room
     spanish: la salan de conferencia
+    context: "The meeting is in the main conference room."
   - english: exhibition
     spanish: la exposición
   - english: university lecturer
