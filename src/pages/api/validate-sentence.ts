@@ -19,7 +19,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
         const prompt = `Analyze the following Spanish sentence: "${userSentence}". 
     Does it correctly use the word "${targetWord}" (or a valid conjugation/variation of it) AND is the sentence grammatically correct Spanish?
-    Respond ONLY with a JSON object in this format: { "valid": boolean, "reason": "string explanation in English" }`;
+    If it is valid, also generate a simple, contextual follow-up question in Spanish related to the sentence.
+    Respond ONLY with a JSON object in this format: { "valid": boolean, "reason": "string explanation in English", "followUpQuestion": "string (optional, only if valid)" }`;
 
         const result = await model.generateContent(prompt);
         const response = result.response;
@@ -28,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Clean up potential markdown code blocks if the model adds them
         const jsonStr = text.replace(/^```json\n|\n```$/g, "");
 
-        const validationResult = JSON.parse(jsonStr) as { valid: boolean, reason: string };
+        const validationResult = JSON.parse(jsonStr) as { valid: boolean; reason: string; followUpQuestion?: string };
 
         return res.status(200).json(validationResult);
     } catch (error) {
