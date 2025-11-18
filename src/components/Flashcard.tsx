@@ -26,7 +26,7 @@ function Flashcard({ front, back, context: initialContext }: { front: string, ba
         },
         body: JSON.stringify({ english: back, spanish: front }),
       });
-      const data = await res.json();
+      const data = (await res.json()) as { context: string };
       if (data.context) {
         setContext(data.context);
       }
@@ -47,7 +47,7 @@ function Flashcard({ front, back, context: initialContext }: { front: string, ba
         {context && <div className="mt-4 text-sm text-gray-600 italic">{context}</div>}
         {!context && (
           <button
-            onClick={handleGetContext}
+            onClick={(e) => void handleGetContext(e)}
             disabled={loading}
             className="mt-4 text-xs bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 disabled:opacity-50"
           >
@@ -61,7 +61,7 @@ function Flashcard({ front, back, context: initialContext }: { front: string, ba
         {context && <div className="mt-4 text-sm text-gray-600 italic">{context}</div>}
         {!context && (
           <button
-            onClick={handleGetContext}
+            onClick={(e) => void handleGetContext(e)}
             disabled={loading}
             className="mt-4 text-xs bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 disabled:opacity-50"
           >

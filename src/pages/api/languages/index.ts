@@ -24,13 +24,15 @@ export type LanguageRes = Array<{
 }>
 
 
-export default function handler(_req: unknown, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { data: { file: string; name: string; id: string; }[]; }): void; new(): any; }; }; }): void {
-    const files = readdirSync( path.join(process.cwd(), 'src', 'data'))
+import { type NextApiRequest, type NextApiResponse } from "next";
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+    const files = readdirSync(path.join(process.cwd(), 'src', 'data'))
 
     const data = files.map(file => {
         const fileReadBuffer = readFileSync(path.join(process.cwd(), 'src', 'data', file))
         const yamlData: languageFile = yaml.parse(fileReadBuffer.toString()) as languageFile
-        
+
         return {
             file,
             name: yamlData.name,
@@ -40,5 +42,5 @@ export default function handler(_req: unknown, res: { status: (arg0: number) => 
         }
     })
 
-    res.status(200).json({data});
+    res.status(200).json({ data });
 }

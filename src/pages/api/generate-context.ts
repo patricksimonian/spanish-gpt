@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
         const prompt = `Generate a simple, short Spanish sentence using the word "${spanish}" (which means "${english}") and provide its English translation. Format: "Spanish sentence. (English translation)". Keep it simple for a learner.`;
         const result = await model.generateContent(prompt);
-        const response = await result.response;
+        const response = result.response;
         const text = response.text().trim();
 
         return res.status(200).json({ context: text });

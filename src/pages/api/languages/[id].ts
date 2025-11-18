@@ -25,14 +25,15 @@ try {
 export type LangaugeResponse = {
     data: languageFile
 }
-export default function handler(req: { query: { id: string | number } }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { data?: any; message?: string }): void; new(): any } } }) {
+import { type NextApiRequest, type NextApiResponse } from "next";
 
-    logger.debug(`Getting language file ${req.query.id}`)
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+    const id = Array.isArray(req.query.id) ? req.query.id[0] : req.query.id;
+    logger.debug(`Getting language file ${id ?? 'undefined'}`)
 
-    if (filesMap[req.query.id]) {
-
-        res.status(200).json({ data: filesMap[req.query.id] });
+    if (id && filesMap[id]) {
+        res.status(200).json({ data: filesMap[id] });
     } else {
         res.status(404).json({ message: 'not found' })
     }

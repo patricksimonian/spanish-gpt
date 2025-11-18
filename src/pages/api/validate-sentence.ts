@@ -22,13 +22,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     Respond ONLY with a JSON object in this format: { "valid": boolean, "reason": "string explanation in English" }`;
 
         const result = await model.generateContent(prompt);
-        const response = await result.response;
+        const response = result.response;
         const text = response.text().trim();
 
         // Clean up potential markdown code blocks if the model adds them
         const jsonStr = text.replace(/^```json\n|\n```$/g, "");
 
-        const validationResult = JSON.parse(jsonStr);
+        const validationResult = JSON.parse(jsonStr) as { valid: boolean, reason: string };
 
         return res.status(200).json(validationResult);
     } catch (error) {

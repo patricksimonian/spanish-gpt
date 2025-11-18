@@ -5,9 +5,39 @@ import Link from "next/link";
 import { type languageFile } from "../api/languages";
 
 // Web Speech API types
+interface SpeechRecognitionEvent {
+    resultIndex: number;
+    results: {
+        isFinal: boolean;
+        0: { transcript: string };
+        length: number;
+        [key: number]: { transcript: string };
+    }[];
+}
+
+interface SpeechRecognitionErrorEvent {
+    error: string;
+}
+
+interface SpeechRecognition extends EventTarget {
+    continuous: boolean;
+    interimResults: boolean;
+    lang: string;
+    start: () => void;
+    stop: () => void;
+    onstart: ((this: SpeechRecognition, ev: Event) => void) | null;
+    onend: ((this: SpeechRecognition, ev: Event) => void) | null;
+    onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => void) | null;
+    onerror: ((this: SpeechRecognition, ev: SpeechRecognitionErrorEvent) => void) | null;
+}
+
+interface SpeechRecognitionConstructor {
+    new(): SpeechRecognition;
+}
+
 interface IWindow extends Window {
-    webkitSpeechRecognition: any;
-    SpeechRecognition: any;
+    webkitSpeechRecognition: SpeechRecognitionConstructor;
+    SpeechRecognition: SpeechRecognitionConstructor;
 }
 
 function SentenceGame() {
@@ -19,7 +49,7 @@ function SentenceGame() {
     const [feedback, setFeedback] = useState<{ valid: boolean; reason: string } | null>(null);
     const [gameState, setGameState] = useState<"playing" | "validating" | "result">("playing");
 
-    const recognitionRef = useRef<any>(null);
+    const recognitionRef = useRef<SpeechRecognition | null>(null);
     const router = useRouter();
     const { id } = router.query;
 
@@ -29,12 +59,14 @@ function SentenceGame() {
             if (id) {
                 const res = await fetch(`/api/languages/${id as string}`);
                 if (res.status === 200) {
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                     const d = await res.json();
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument
                     setLanguageData(d.data);
                 }
             }
         };
-        fetchData();
+        void fetchData();
     }, [id]);
 
     // Timer logic
@@ -67,22 +99,18 @@ function SentenceGame() {
 
             recognition.onend = () => {
                 console.log("Speech recognition ended");
-                // Optional: restart if we want continuous listening to really persist, 
-                // but for now let's just see if it stops unexpectedly.
-                if (isListening) {
-                    // recognition.start(); 
-                }
             };
 
-            recognition.onresult = (event: any) => {
+            recognition.onresult = (event: SpeechRecognitionEvent) => {
                 console.log("Results coming in")
                 let finalTranscript = '';
                 for (let i = event.resultIndex; i < event.results.length; ++i) {
-                    if (event.results[i].isFinal) {
-                        finalTranscript += event.results[i][0].transcript;
-                    } else {
+                    const result = event.results[i];
+                    if (result?.isFinal && result[0]) {
+                        finalTranscript += result[0].transcript;
+                    } else if (result && result[0]) {
                         // interim
-                        setTranscript(prev => event.results[i][0].transcript);
+                        setTranscript(result[0].transcript);
                     }
                 }
                 if (finalTranscript) {
@@ -90,7 +118,7 @@ function SentenceGame() {
                 }
             };
 
-            recognition.onerror = (event: any) => {
+            recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
                 console.error("Speech recognition error", event.error);
                 alert(`Speech recognition error: ${event.error}`); // Alert user for visibility
                 setIsListening(false);
@@ -105,6 +133,7 @@ function SentenceGame() {
     const startListening = () => {
         if (recognitionRef.current) {
             try {
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
                 recognitionRef.current.start();
                 setIsListening(true);
                 setTranscript("");
@@ -116,6 +145,7 @@ function SentenceGame() {
 
     const stopListening = () => {
         if (recognitionRef.current) {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
             recognitionRef.current.stop();
             setIsListening(false);
         }
@@ -138,7 +168,7 @@ function SentenceGame() {
                     userSentence: transcript
                 }),
             });
-            const data = await res.json();
+            const data = (await res.json()) as { valid: boolean; reason: string };
             setFeedback(data);
             setGameState("result");
         } catch (e) {
@@ -202,7 +232,7 @@ function SentenceGame() {
 
                     <div className="flex gap-4">
                         {gameState === "playing" && (
-                            <button onClick={handleCheck} className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-xl transition-colors">
+                            <button onClick={() => void handleCheck()} className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-xl transition-colors">
                                 Check Sentence
                             </button>
                         )}
